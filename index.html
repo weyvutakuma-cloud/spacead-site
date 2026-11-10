@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="久住高原のしぼりたてミルクで作る無添加ジェラートのSWEETS FARM シャーロットと、湯布院・金鱗湖の抹茶カフェ 金鱗茶屋。店舗情報・フレーバー・カフェメニュー・通販(オンラインショップ)のご案内。">
-<link rel="canonical" href="https://weyvutakuma-cloud.github.io/spacead-site/">
+<link rel="canonical" href="https://sweetsfarm.com/">
 <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="SWEETS FARM & 金鱗茶屋">
 <meta property="og:title" content="SWEETS FARM & 金鱗茶屋 | 大分のジェラテリア">
 <meta property="og:description" content="久住高原のしぼりたてミルクで作る無添加ジェラートのSWEETS FARM シャーロットと、湯布院・金鱗湖の抹茶カフェ 金鱗茶屋。店舗情報・フレーバー・カフェメニュー・通販(オンラインショップ)のご案内。">
-<meta property="og:url" content="https://weyvutakuma-cloud.github.io/spacead-site/"><meta property="og:image" content="https://weyvutakuma-cloud.github.io/spacead-site/images/kuju-hero.jpg">
+<meta property="og:url" content="https://sweetsfarm.com/"><meta property="og:image" content="https://sweetsfarm.com/images/kuju-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#ffffff">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "IceCreamShop", "name": "SWEETS FARM シャーロット", "url": "https://weyvutakuma-cloud.github.io/spacead-site/", "email": "sweetsfarm910@gmail.com", "servesCuisine": "ジェラート", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.0479468, "longitude": 131.244223}, "parentOrganization": {"@type": "Organization", "name": "有限会社スペースアド"}}, {"@type": "CafeOrCoffeeShop", "name": "金鱗茶屋 Sweets farm cafe", "url": "https://weyvutakuma-cloud.github.io/spacead-site/", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressLocality": "由布市", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.2660891, "longitude": 131.3666267}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "IceCreamShop", "name": "SWEETS FARM シャーロット", "url": "https://sweetsfarm.com/", "email": "sweetsfarm910@gmail.com", "servesCuisine": "ジェラート", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.0479468, "longitude": 131.244223}, "parentOrganization": {"@type": "Organization", "name": "有限会社スペースアド"}}, {"@type": "CafeOrCoffeeShop", "name": "金鱗茶屋 Sweets farm cafe", "url": "https://sweetsfarm.com/", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressLocality": "由布市", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.2660891, "longitude": 131.3666267}}]}</script>
 <title>SWEETS FARM & 金鱗茶屋 | 大分のジェラテリア</title>
 <link rel="icon" type="image/png" href="images/sweets-farm-logo-small.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2083,6 +2083,7 @@
   }
 
   .drink-icon.has-image .drink-icon-emoji { display: none; }
+  .drink-icon.has-image { background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #fff; }
 
   .drink-info { flex: 1; min-width: 0; }
 
@@ -4476,5 +4477,19 @@
 
 </script>
 
+<script>
+/* 公開用表示：編集用の表示・操作を隠します。編集したいときは、アドレスの最後に ?edit=1 を付けて開いてください */
+(function(){
+  if (/[?&]edit=1/.test(location.search)) return;
+  var st=document.createElement('style');
+  st.textContent='.edit-hint,.drop-hint,.remove-img-btn,.img-drop-zone input[type=file]{display:none!important}.img-drop-zone{cursor:inherit}.editable-text{outline:none!important;cursor:inherit!important}';
+  document.head.appendChild(st);
+  document.querySelectorAll('[contenteditable]').forEach(function(el){el.removeAttribute('contenteditable');});
+  document.querySelectorAll('a[onclick*="resetAll"]').forEach(function(a){a.style.display='none';});
+  var oc=HTMLInputElement.prototype.click;
+  HTMLInputElement.prototype.click=function(){ if(this.type==='file') return; return oc.call(this); };
+  ['dragover','drop'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation();},true);});
+})();
+</script>
 </body>
 </html>
