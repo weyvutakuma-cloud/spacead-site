@@ -1,0 +1,4480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="久住高原のしぼりたてミルクで作る無添加ジェラートのSWEETS FARM シャーロットと、湯布院・金鱗湖の抹茶カフェ 金鱗茶屋。店舗情報・フレーバー・カフェメニュー・通販(オンラインショップ)のご案内。">
+<link rel="canonical" href="https://weyvutakuma-cloud.github.io/spacead-site/">
+<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="SWEETS FARM & 金鱗茶屋">
+<meta property="og:title" content="SWEETS FARM & 金鱗茶屋 | 大分のジェラテリア">
+<meta property="og:description" content="久住高原のしぼりたてミルクで作る無添加ジェラートのSWEETS FARM シャーロットと、湯布院・金鱗湖の抹茶カフェ 金鱗茶屋。店舗情報・フレーバー・カフェメニュー・通販(オンラインショップ)のご案内。">
+<meta property="og:url" content="https://weyvutakuma-cloud.github.io/spacead-site/"><meta property="og:image" content="https://weyvutakuma-cloud.github.io/spacead-site/images/kuju-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#ffffff">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "IceCreamShop", "name": "SWEETS FARM シャーロット", "url": "https://weyvutakuma-cloud.github.io/spacead-site/", "email": "sweetsfarm910@gmail.com", "servesCuisine": "ジェラート", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.0479468, "longitude": 131.244223}, "parentOrganization": {"@type": "Organization", "name": "有限会社スペースアド"}}, {"@type": "CafeOrCoffeeShop", "name": "金鱗茶屋 Sweets farm cafe", "url": "https://weyvutakuma-cloud.github.io/spacead-site/", "address": {"@type": "PostalAddress", "addressRegion": "大分県", "addressLocality": "由布市", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.2660891, "longitude": 131.3666267}}]}</script>
+<title>SWEETS FARM & 金鱗茶屋 | 大分のジェラテリア</title>
+<link rel="icon" type="image/png" href="images/sweets-farm-logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFF8F0;
+    --warm-white: #FFFDF8;
+    --peach: #FFB085;
+    --coral: #FF7A5C;
+    --matcha: #7DAE6A;
+    --matcha-dark: #4E7A3C;
+    --gold: #D4A843;
+    --brown: #6B4226;
+    --soft-green: #E8F5E0;
+    --soft-peach: #FFF0E6;
+    --text-dark: #3A2A1E;
+    --text-mid: #7A5A40;
+    --shadow: rgba(107, 66, 38, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background: transparent;
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== サイト全体の固定背景（くじゅう連山） =====
+     iOS でも動く position:fixed 擬似要素方式 */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      linear-gradient(180deg, rgba(255,248,240,0.25) 0%, rgba(255,248,240,0.1) 50%, rgba(255,248,240,0.3) 100%),
+      url('images/kuju-hero.jpg') center 40% / cover no-repeat;
+    pointer-events: none;
+  }
+
+  /* セクションの隙間から山が見える「パララックス帯」 */
+  .kuju-band {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 透明 → body::before の固定背景が見える */
+  }
+
+  .kuju-band-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: white;
+    text-shadow: 0 2px 20px rgba(0,30,60,0.55), 0 1px 4px rgba(0,20,40,0.5);
+    letter-spacing: 0.05em;
+    opacity: 0.95;
+  }
+
+  @media (max-width: 700px) {
+    .kuju-band { height: 130px; }
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2.5rem;
+    background: rgba(255,248,240,0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,176,133,0.3);
+    transition: all 0.3s;
+    box-shadow: 0 2px 20px rgba(107,66,38,0.08);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .nav-logo:hover img { transform: scale(1.05); }
+
+  /* ── ハンバーガーボタン（常時表示） ── */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px; height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    height: 2.5px;
+    background: var(--brown);
+    border-radius: 2px;
+    transition: all 0.3s;
+    transform-origin: center;
+  }
+
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(8.75px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-8.75px) rotate(-45deg); }
+
+  /* ── ドロップダウンメニュー ── */
+  .nav-drawer {
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(255,248,240,0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(255,176,133,0.4);
+    box-shadow: 0 12px 40px rgba(107,66,38,0.15);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    z-index: 999;
+  }
+
+  .nav-drawer.open {
+    max-height: 600px;
+    padding: 1.2rem 0;
+  }
+
+  .nav-drawer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+  }
+
+  .nav-drawer-group {
+    padding: 0.8rem 1rem;
+    border-right: 1px solid rgba(255,176,133,0.2);
+  }
+
+  .nav-drawer-group:last-child { border-right: none; }
+
+  .nav-drawer-group-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 0.7rem;
+  }
+
+  .nav-drawer-group ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .nav-drawer-group ul a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .nav-drawer-group ul a:hover {
+    background: rgba(255,176,133,0.15);
+    color: var(--coral);
+  }
+
+  .nav-drawer-group ul a.active-section {
+    color: var(--coral);
+    background: rgba(255,122,92,0.08);
+  }
+
+  .nav-drawer-group ul a .nav-icon { font-size: 1rem; }
+
+  .nav-order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white !important;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255,122,92,0.35);
+    margin-top: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .nav-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,122,92,0.45);
+  }
+
+  /* 古いnav-linksは非表示に */
+  .nav-links { display: none !important; }
+
+  /* ===== セクションアンカーリンク ===== */
+  .section-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .section-anchor::after {
+    content: '#';
+    font-size: 0.6em;
+    color: var(--coral);
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-weight: 700;
+  }
+
+  .section-anchor:hover::after { opacity: 1; }
+
+  /* ページトップ戻るボタン */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 42px; height: 42px;
+    background: white;
+    border: 2px solid var(--peach);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--coral);
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 98;
+  }
+
+  .back-to-top.visible { opacity: 1; pointer-events: all; }
+  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255,122,92,0.3); }
+
+  @media (max-width: 900px) {
+    nav { padding: 0.7rem 1.5rem; }
+    .nav-drawer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-drawer-inner { grid-template-columns: 1fr; }
+    .nav-drawer-group { border-right: none; border-bottom: 1px solid rgba(255,176,133,0.2); }
+    .nav-drawer-group:last-child { border-bottom: none; }
+  }
+
+  /* ===== HERO — くじゅう連山 写真背景 ===== */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #9db8c8;
+  }
+
+  /* 写真背景：ゆっくりズームする Ken Burns 効果 */
+  .hero-photo-bg {
+    position: absolute;
+    inset: -6%;
+    background: url('images/kuju-hero.jpg') center 42% / cover no-repeat;
+    animation: heroKenBurns 28s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  @keyframes heroKenBurns {
+    0%   { transform: scale(1)     translate(0, 0); }
+    100% { transform: scale(1.09)  translate(-1.5%, -1%); }
+  }
+
+  /* 文字を読みやすくする薄いオーバーレイ（上下にグラデーション） */
+  .hero-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(20,40,70,0.35) 0%,
+      rgba(20,40,70,0.12) 25%,
+      rgba(255,255,255,0)  45%,
+      rgba(255,255,255,0)  60%,
+      rgba(30,50,30,0.2)   82%,
+      rgba(255,250,244,0.55) 96%,
+      var(--warm-white)    100%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* === 雲（写真上を流れる白い霞） === */
+  .cloud {
+    position: absolute;
+    background: rgba(255,255,255,0.55);
+    border-radius: 80px;
+    filter: blur(14px);
+    animation: cloudDrift linear infinite;
+    z-index: 3;
+  }
+  .cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+  }
+
+  .cloud1 { width: 260px; height: 44px; top: 14%; left: -280px; opacity: 0.55; animation-duration: 70s; }
+  .cloud1::before { width: 110px; height: 80px; top: -34px; left: 35px; }
+  .cloud1::after  { width: 85px;  height: 62px; top: -22px; left: 120px; }
+
+  .cloud2 { width: 190px; height: 36px; top: 24%; left: -220px; opacity: 0.4; animation-duration: 95s; animation-delay: -30s; }
+  .cloud2::before { width: 85px; height: 60px; top: -26px; left: 22px; }
+  .cloud2::after  { width: 62px; height: 45px; top: -16px; left: 85px; }
+
+  .cloud3 { width: 320px; height: 48px; top: 8%; left: -340px; opacity: 0.35; animation-duration: 115s; animation-delay: -60s; }
+  .cloud3::before { width: 140px; height: 95px; top: -44px; left: 55px; }
+  .cloud3::after  { width: 105px; height: 72px; top: -28px; left: 160px; }
+
+  @keyframes cloudDrift {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(100vw + 380px)); }
+  }
+
+  /* === 鳥の群れ === */
+  .birds {
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    animation: birdsFly 42s linear infinite;
+    z-index: 4;
+  }
+  .bird {
+    position: absolute;
+    width: 16px; height: 5px;
+    border-top: 2.5px solid rgba(30,50,80,0.6);
+    border-radius: 50% 50% 0 0;
+    animation: wingFlap 0.55s ease-in-out infinite alternate;
+  }
+  .bird::after {
+    content: '';
+    position: absolute;
+    width: 8px; height: 5px;
+    border-top: 2.5px solid rgba(30,50,80,0.6);
+    border-radius: 50% 50% 0 0;
+    right: -8px; top: -2.5px;
+    transform-origin: left center;
+    animation: wingFlap 0.55s ease-in-out infinite alternate-reverse;
+  }
+  .bird:nth-child(1) { top: 0;    left: 0; }
+  .bird:nth-child(2) { top: 12px; left: 25px; animation-delay: 0.12s; }
+  .bird:nth-child(3) { top: -8px; left: 48px; animation-delay: 0.28s; }
+  .bird:nth-child(4) { top: 18px; left: 68px; animation-delay: 0.08s; }
+  .bird:nth-child(5) { top: -4px; left: 90px; animation-delay: 0.2s; }
+
+  @keyframes wingFlap {
+    from { transform: scaleY(1); }
+    to   { transform: scaleY(-0.4); }
+  }
+  @keyframes birdsFly {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(92vw, -60px) scale(0.55); }
+  }
+
+  /* === 舞う花びら === */
+  .petal {
+    position: absolute;
+    font-size: 1rem;
+    animation: petalFall linear infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+  @keyframes petalFall {
+    0%   { transform: translateY(-20px) rotate(0deg) translateX(0px); opacity: 0; }
+    8%   { opacity: 0.8; }
+    85%  { opacity: 0.5; }
+    100% { transform: translateY(95vh) rotate(540deg) translateX(70px); opacity: 0; }
+  }
+
+  /* モバイルは軽量画像に切り替え */
+  @media (max-width: 700px) {
+    .hero-photo-bg {
+      background-image: url('images/kuju-hero-mobile.jpg');
+    }
+  }
+
+  .hero-overlay-content {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    animation: heroFadeIn 2.2s ease-out 0.6s both;
+    width: 100%;
+  }
+
+  @keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255,240,180,0.95);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom: 0.8rem;
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 0.35rem 1.2rem;
+    border-radius: 50px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,220,140,0.3);
+  }
+
+  .hero-overlay-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    color: #ffffff;
+    line-height: 1.12;
+    text-shadow: 0 4px 40px rgba(0,30,80,0.75), 0 2px 8px rgba(0,20,50,0.6), 0 1px 0 rgba(0,0,0,0.4);
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-overlay-content h1 em {
+    font-family: 'Dancing Script', cursive;
+    font-style: normal;
+    color: #ffe390;
+    display: block;
+    font-size: 1.18em;
+    text-shadow: 0 2px 20px rgba(200,100,0,0.5);
+  }
+
+  .hero-overlay-content .hero-sub {
+    font-size: clamp(0.88rem, 1.5vw, 1.08rem);
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.9;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.2rem;
+  }
+
+  .badge {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.38);
+    border-radius: 50px;
+    padding: 0.38rem 1rem;
+    font-size: 0.77rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(255,122,92,0.5);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(255,122,92,0.6);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255,255,255,0.55);
+    backdrop-filter: blur(8px);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.28);
+    transform: translateY(-3px);
+  }
+
+  /* Scroll hint */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1.6rem;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    animation: scrollBounce 2.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 34px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  }
+  @keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(7px); }
+  }
+
+  @media (max-width: 700px) {
+    .scroll-hint { display: none; }
+  }
+  /* ===== SECTION COMMON ===== */
+  section { padding: 5rem 3rem; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--text-dark);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ===== STORES ===== */
+  .stores-section {
+    background: var(--warm-white);
+  }
+
+  .stores-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .store-card {
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 12px 50px var(--shadow);
+    transition: transform 0.4s;
+    background: white;
+  }
+
+  .store-card:hover { transform: translateY(-8px); }
+
+  .store-header {
+    padding: 2.5rem 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .store-header.farm {
+    background: linear-gradient(135deg, #FFF0E6 0%, #FFE4CC 100%);
+  }
+
+  .store-header.matcha {
+    background: linear-gradient(135deg, #E8F5E0 0%, #D4EDCA 100%);
+  }
+
+  .store-emoji {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    animation: wobble 4s ease-in-out infinite;
+  }
+
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  .store-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+
+  .store-tag.farm-tag { background: var(--coral); color: white; }
+  .store-tag.matcha-tag { background: var(--matcha); color: white; }
+
+  .store-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+  }
+
+  .store-name-sub {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .store-body {
+    padding: 2rem 2.5rem 2.5rem;
+  }
+
+  .store-desc {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .store-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-chip {
+    background: var(--soft-peach);
+    color: var(--brown);
+    border-radius: 50px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .feature-chip.green { background: var(--soft-green); color: var(--matcha-dark); }
+
+  .store-info {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 2;
+    color: var(--text-mid);
+  }
+
+  .store-info strong {
+    color: var(--text-dark);
+    font-weight: 700;
+  }
+
+  .store-links {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .link-map { background: #4285F4; color: white; }
+  .link-menu { background: white; color: var(--brown); border: 1.5px solid var(--peach); }
+  .link-menu:hover { background: var(--soft-peach); }
+
+  /* ── ★評価バッジ ── */
+  .store-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: #fffbe8;
+    border: 1.5px solid #f0d060;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .rating-stars {
+    color: #f5a623;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  .rating-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+  }
+
+  .rating-link {
+    font-size: 0.75rem;
+    color: #4285F4;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: auto;
+    transition: opacity 0.15s;
+  }
+
+  .rating-link:hover { opacity: 0.7; text-decoration: underline; }
+  .link-fb { background: #1877F2; color: white; }
+  .link-ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+  .link-shop { background: var(--coral); color: white; }
+  .link-btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+  /* ===== ONLINE SHOP ===== */
+  .shop-section {
+    background: linear-gradient(135deg, var(--soft-peach) 0%, #FFE8D5 100%);
+  }
+
+  .shop-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .shop-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .shop-text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .shop-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  .product-card:hover { transform: translateY(-4px); }
+
+  .product-emoji { font-size: 3rem; display: block; margin-bottom: 0.8rem; }
+
+  .product-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .product-desc {
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .product-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--coral);
+    font-weight: 700;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-section {
+    background: var(--warm-white);
+  }
+
+  .about-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .value-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 30px var(--shadow);
+    transition: transform 0.3s;
+  }
+
+  .value-card:hover { transform: translateY(-6px); }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .value-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .value-text {
+    font-size: 0.87rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* ===== NEWS ===== */
+  .news-section {
+    background: var(--cream);
+  }
+
+  .news-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .news-item {
+    display: grid;
+    grid-template-columns: 120px 80px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(107,66,38,0.1);
+    transition: background 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .news-item:hover { background: white; border-radius: 12px; padding-left: 1rem; }
+
+  .news-date {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .news-cat {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  .news-cat.farm { background: rgba(255,122,92,0.15); color: var(--coral); }
+  .news-cat.matcha { background: rgba(125,174,106,0.15); color: var(--matcha-dark); }
+  .news-cat.all { background: rgba(107,66,38,0.1); color: var(--brown); }
+
+  .news-title {
+    font-size: 0.93rem;
+    color: var(--text-dark);
+    font-weight: 400;
+  }
+
+  /* ===== CONTACT / MAP ===== */
+  .contact-section {
+    background: linear-gradient(135deg, #E8F5E0 0%, #D4EDCA 100%);
+  }
+
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-form p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid rgba(107,66,38,0.15);
+    border-radius: 12px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.9rem;
+    background: white;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--coral);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--matcha), var(--matcha-dark));
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(78,122,60,0.4);
+  }
+
+  .maps-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .map-embed {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 25px var(--shadow);
+  }
+
+  .map-embed-label {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .map-embed-label.farm-label { background: rgba(255,122,92,0.1); color: var(--coral); }
+  .map-embed-label.matcha-label { background: rgba(125,174,106,0.1); color: var(--matcha-dark); }
+
+  .map-embed iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    display: block;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--text-dark);
+    color: white;
+    padding: 4rem 3rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-brand .logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  .footer-brand .logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+  }
+
+  .footer-col h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--peach);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-col ul a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 300;
+  }
+
+  .footer-col ul a:hover { color: var(--peach); }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ===== STICKY ORDER BUTTON ===== */
+  .sticky-order {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 6px 30px rgba(255,122,92,0.5);
+    transition: all 0.3s;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sticky-order:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 10px 40px rgba(255,122,92,0.6);
+  }
+
+  /* ===== IMAGE DROP ZONES (drag & drop / click to change photos) ===== */
+  .img-drop-zone {
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.2s, box-shadow 0.2s;
+  }
+
+  .img-drop-zone.drag-over {
+    filter: brightness(1.08);
+    box-shadow: inset 0 0 0 3px var(--coral);
+  }
+
+  .img-drop-zone input[type="file"] { display: none; }
+
+  .img-drop-zone .drop-hint {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background: rgba(20,16,12,0);
+    opacity: 0;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: opacity 0.25s, background 0.25s;
+    border-radius: inherit;
+  }
+
+  .img-drop-zone .drop-hint-icon { font-size: 1.6rem; }
+
+  .img-drop-zone:hover .drop-hint,
+  .img-drop-zone.drag-over .drop-hint {
+    opacity: 1;
+    background: rgba(20,16,12,0.55);
+  }
+
+  .img-drop-zone .remove-img-btn {
+    position: absolute;
+    top: 8px; right: 8px;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(20,16,12,0.6);
+    color: white;
+    border: none;
+    font-size: 0.85rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 6;
+    transition: background 0.2s;
+  }
+
+  .img-drop-zone .remove-img-btn:hover { background: var(--coral); }
+  .img-drop-zone.has-image .remove-img-btn { display: flex; }
+
+  /* Store header photo state */
+  .store-header { position: relative; }
+  .store-header.has-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20,16,12,0.05) 0%, rgba(20,16,12,0.6) 100%);
+    z-index: 1;
+  }
+  .store-header.has-image .store-tag,
+  .store-header.has-image .store-name,
+  .store-header.has-image .store-name-sub {
+    position: relative;
+    z-index: 2;
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+  }
+  .store-header.has-image .store-emoji { display: none; }
+
+  /* Product card photo state */
+  .product-card { position: relative; overflow: hidden; min-height: 185px; }
+  .product-card.has-image .product-emoji { display: none; }
+  .product-card.has-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(20,16,12,0.65) 100%);
+    border-radius: 20px;
+    z-index: 1;
+  }
+  .product-card.has-image .product-name,
+  .product-card.has-image .product-desc,
+  .product-card.has-image .product-price {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+  }
+
+  /* Hero polaroid photo frame */
+  .hero-photo-frame {
+    position: absolute;
+    bottom: 6.5rem;
+    right: 4rem;
+    width: 170px;
+    background: white;
+    padding: 10px 10px 34px;
+    border-radius: 4px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    transform: rotate(4deg);
+    z-index: 22;
+    transition: transform 0.3s;
+  }
+
+  .hero-photo-frame:hover { transform: rotate(0deg) scale(1.03); }
+
+  .hero-photo-inner {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fdf0e0, #e8f5e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-photo-placeholder {
+    text-align: center;
+    color: #a08868;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .hero-photo-placeholder .icon { font-size: 1.8rem; display: block; margin-bottom: 0.3rem; }
+
+  .hero-photo-inner.has-image .hero-photo-placeholder { display: none; }
+
+  .hero-photo-caption {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 0.95rem;
+    color: #6B4226;
+    margin-top: 6px;
+  }
+
+  .edit-hint {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.85;
+  }
+
+  .edit-hint strong { color: var(--coral); font-weight: 700; }
+
+  @media (max-width: 900px) {
+    .hero-photo-frame { display: none; }
+  }
+
+  /* ===== EDITABLE TEXT (click to edit any text on the page) ===== */
+  .editable-text {
+    cursor: text;
+    outline: none;
+    border-radius: 4px;
+    transition: background 0.15s, box-shadow 0.15s;
+  }
+
+  .editable-text:hover {
+    background: rgba(255,122,92,0.10);
+    box-shadow: 0 0 0 2px rgba(255,122,92,0.28);
+  }
+
+  .editable-text:focus {
+    background: rgba(255,122,92,0.14);
+    box-shadow: 0 0 0 2px var(--coral);
+  }
+
+  /* Variant for text sitting on dark / photo backgrounds */
+  .editable-text.on-dark:hover {
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+  }
+
+  .editable-text.on-dark:focus {
+    background: rgba(255,255,255,0.22);
+    box-shadow: 0 0 0 2px white;
+  }
+
+  /* When a real photo has been dropped into a store-header / product-card,
+     their text turns white (see has-image rules above) — so the edit-hover
+     highlight should switch to a light tint instead of the default coral tint. */
+  .store-header.has-image .editable-text:hover,
+  .product-card.has-image .editable-text:hover {
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.55);
+  }
+
+  .store-header.has-image .editable-text:focus,
+  .product-card.has-image .editable-text:focus {
+    background: rgba(255,255,255,0.24);
+    box-shadow: 0 0 0 2px white;
+  }
+
+  /* ===== Floating help legend ===== */
+  .edit-legend {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 99;
+    background: white;
+    border-radius: 16px;
+    padding: 0.9rem 1.2rem;
+    box-shadow: 0 8px 30px var(--shadow);
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    max-width: 230px;
+    line-height: 1.7;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .edit-legend strong { color: var(--text-dark); }
+
+  .edit-legend .legend-close {
+    position: absolute;
+    top: 6px; right: 8px;
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    cursor: pointer;
+  }
+
+  .edit-legend.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+
+  @media (max-width: 700px) {
+    .edit-legend { left: 1rem; right: 1rem; bottom: 1rem; max-width: none; }
+  }
+
+  /* ===== COMPANY / OPERATING COMPANY SECTION ===== */
+  .company-section {
+    background: var(--cream);
+    padding-top: 0;
+    overflow: hidden;
+  }
+
+  /* ─── 編集モードバー ─── */
+  .co-edit-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #f0f7ec, #e4f0df);
+    border-bottom: 2px solid var(--matcha);
+    padding: 0.7rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .co-edit-toggle, .co-edit-done {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.3rem;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .co-edit-toggle {
+    background: white;
+    color: var(--matcha-dark);
+    border: 2px solid var(--matcha);
+    box-shadow: 0 2px 10px rgba(78,122,60,0.15);
+  }
+
+  .co-edit-toggle:hover { background: var(--matcha); color: white; }
+
+  .co-edit-done {
+    background: var(--matcha);
+    color: white;
+    box-shadow: 0 2px 10px rgba(78,122,60,0.3);
+  }
+
+  .co-edit-done:hover { background: var(--matcha-dark); }
+
+  .co-edit-hint {
+    font-size: 0.78rem;
+    color: var(--matcha-dark);
+    font-weight: 300;
+    background: rgba(78,122,60,0.08);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  /* ─── co-editable：編集モード時のみ強調 ─── */
+  .co-editable {
+    cursor: default;
+    transition: background 0.15s, box-shadow 0.15s, outline 0.15s;
+    outline: none;
+    border-radius: 4px;
+  }
+
+  /* 編集モードON時のスタイル */
+  .company-section.edit-mode .co-editable {
+    cursor: text;
+    background: rgba(125,174,106,0.08);
+    box-shadow: 0 0 0 2px rgba(78,122,60,0.25);
+    padding: 1px 4px;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .company-section.edit-mode .co-editable::after {
+    content: '✏️';
+    position: absolute;
+    top: -12px; right: -4px;
+    font-size: 0.65rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+  }
+
+  .company-section.edit-mode .co-editable:hover::after { opacity: 1; }
+
+  .company-section.edit-mode .co-editable:hover {
+    background: rgba(125,174,106,0.15);
+    box-shadow: 0 0 0 2px var(--matcha);
+  }
+
+  .company-section.edit-mode .co-editable:focus {
+    background: rgba(125,174,106,0.2);
+    box-shadow: 0 0 0 2px var(--matcha-dark);
+    outline: none;
+  }
+
+  /* .editable-text も編集モードで視覚的に強調 */
+  .company-section.edit-mode .editable-text {
+    background: rgba(125,174,106,0.08) !important;
+    box-shadow: 0 0 0 2px rgba(78,122,60,0.25) !important;
+  }
+
+  .company-section.edit-mode .editable-text:hover {
+    background: rgba(125,174,106,0.15) !important;
+    box-shadow: 0 0 0 2px var(--matcha) !important;
+  }
+
+  .company-section.edit-mode .editable-text:focus {
+    background: rgba(125,174,106,0.2) !important;
+    box-shadow: 0 0 0 2px var(--matcha-dark) !important;
+  }
+
+  /* ─── 会社情報カード ─── */
+  .co-info-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+    display: block;
+  }
+
+  .co-info-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    line-height: 2.1;
+    flex-wrap: wrap;
+  }
+
+  .co-info-label {
+    font-weight: 700;
+    color: var(--text-dark);
+    min-width: 5.2em;
+    font-size: 0.84rem;
+    flex-shrink: 0;
+  }
+
+  .co-info-val {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+  }
+  .company-banner {
+    background: white;
+    border-bottom: 3px solid #b8c8b0;
+    padding: 1.4rem 3rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .company-banner-logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* SPACE AD square logo (CSS recreation) */
+  .sa-logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sa-logo-square {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #7a9070;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .sa-inner-curve {
+    position: absolute;
+    left: 3px; top: 3px;
+    width: 18px; height: 24px;
+    border-right: 2px solid #7a9070;
+    border-radius: 0 50% 50% 0 / 0 50% 50% 0;
+  }
+
+  .sa-inner-dot {
+    position: absolute;
+    right: 5px; top: 50%;
+    transform: translateY(-50%);
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #7a9070;
+  }
+
+  .sa-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sa-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+    color: #5a7050;
+    line-height: 1.1;
+  }
+
+  .sa-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.15em;
+    color: #7a9070;
+    font-weight: 300;
+  }
+
+  .company-banner-title {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+    padding-left: 1.5rem;
+    border-left: 2px solid #d0d8c8;
+  }
+
+  .company-banner-title strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+  }
+
+  .company-banner-lead {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    text-align: right;
+    max-width: 260px;
+  }
+
+  /* ─── Mountain background strip ─── */
+  .company-mountain-bg {
+    width: 100%;
+    height: 120px;
+    background: url('images/spacead-bg.jpg') center 35% / cover no-repeat;
+    filter: brightness(0.95) saturate(0.9);
+    margin-bottom: 0;
+  }
+
+  /* ─── Main grid area ─── */
+  .company-section .company-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+    padding: 3rem 3rem 4rem;
+    background: var(--cream);
+  }
+
+  .company-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--peach);
+  }
+
+  /* History timeline */
+  .timeline {
+    position: relative;
+    padding-left: 1.6rem;
+    border-left: 2px solid rgba(255,176,133,0.5);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 1.2rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.66rem;
+    top: 0.2rem;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--coral);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 2px var(--coral);
+  }
+
+  .timeline-year {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--coral);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-text {
+    font-size: 0.86rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* Business flow steps */
+  .biz-flow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biz-step {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .biz-step-label {
+    background: linear-gradient(135deg, var(--soft-green), #d4edca);
+    border: 1px solid var(--matcha);
+    color: var(--matcha-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+    align-self: center;
+  }
+
+  .biz-step:nth-child(3) .biz-step-label {
+    background: linear-gradient(135deg, #ffe4cc, var(--soft-peach));
+    border-color: var(--peach);
+    color: var(--brown);
+  }
+
+  .biz-step:nth-child(5) .biz-step-label {
+    background: linear-gradient(135deg, #d8ecf7, #c2e0f2);
+    border-color: #7fb8d8;
+    color: #2e6080;
+  }
+
+  .biz-step-detail h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.35rem;
+  }
+
+  .biz-step-detail ul {
+    list-style: none;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    line-height: 1.85;
+  }
+
+  .biz-step-detail ul li::before { content: '・'; color: var(--coral); }
+
+  .biz-arrow {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 46px;
+    margin: 0.25rem 0;
+  }
+
+  .biz-arrow svg { width: 20px; height: 24px; }
+
+  .company-info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    margin-top: 1.8rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    font-size: 0.84rem;
+    line-height: 2.1;
+    color: var(--text-mid);
+    border-left: 4px solid var(--matcha);
+  }
+
+  .company-info-card strong {
+    color: var(--text-dark);
+    font-weight: 700;
+    display: inline-block;
+    min-width: 5.5em;
+  }
+
+  @media (max-width: 900px) {
+    .company-banner { flex-direction: column; gap: 0.8rem; align-items: flex-start; padding: 1rem 1.5rem; }
+    .company-banner-lead { text-align: left; max-width: none; }
+    .company-section .company-grid { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem 1.5rem; }
+    .biz-step { grid-template-columns: 90px 1fr; }
+    .biz-arrow { padding-left: 34px; }
+  }
+
+  /* ===== FLAVOR MENU SECTION ===== */
+  .flavors-section {
+    background: linear-gradient(180deg, var(--warm-white) 0%, var(--cream) 100%);
+  }
+
+  .price-bar {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .price-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.3rem 1rem;
+    text-align: center;
+    box-shadow: 0 6px 25px var(--shadow);
+    border: 2px solid transparent;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+
+  .price-card:hover { transform: translateY(-4px); border-color: var(--peach); }
+
+  .price-card .scoop {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .price-card .size-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+  }
+
+  .price-card .price-yen {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--coral);
+    font-weight: 700;
+  }
+
+  .flavor-tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .flavor-tab-btn {
+    padding: 0.55rem 1.3rem;
+    border-radius: 50px;
+    border: 2px solid rgba(255,176,133,0.4);
+    background: white;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-mid);
+    transition: all 0.2s;
+  }
+
+  .flavor-tab-btn.active {
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white;
+    border-color: transparent;
+  }
+
+  .flavor-tab-content { display: none; }
+  .flavor-tab-content.active { display: block; animation: fadeUpIn 0.4s ease; }
+
+  @keyframes fadeUpIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .flavor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .flavor-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: transform 0.25s;
+  }
+
+  .flavor-card:hover { transform: translateY(-5px); }
+
+  .flavor-photo {
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(135deg, var(--soft-peach), #ffe4d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    position: relative;
+  }
+
+  .flavor-name {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    padding: 0.65rem 0.4rem;
+    line-height: 1.4;
+  }
+
+  .flavor-unconfirmed {
+    font-size: 0.65rem;
+    color: var(--coral);
+    font-weight: 700;
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  .flavor-photo.has-image .flavor-photo-icon { display: none; }
+
+  .flavor-footnote {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    opacity: 0.75;
+    font-weight: 300;
+    margin-top: 2rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 900px) {
+    .flavor-grid { grid-template-columns: repeat(3, 1fr); }
+    .price-bar { grid-template-columns: 1fr; max-width: 280px; }
+  }
+
+  @media (max-width: 600px) {
+    .flavor-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== CAFE DRINK MENU SECTION ===== */
+  .drinks-section {
+    background: var(--warm-white);
+  }
+
+  .drink-tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .drink-tab-btn {
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    border: 2px solid rgba(125,174,106,0.35);
+    background: white;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-mid);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .drink-tab-btn.active {
+    background: linear-gradient(135deg, var(--matcha), var(--matcha-dark));
+    color: white;
+    border-color: transparent;
+  }
+
+  .drink-tab-content { display: none; }
+  .drink-tab-content.active { display: block; animation: fadeUpIn 0.4s ease; }
+
+  .drink-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .drink-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 4px 18px var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    transition: transform 0.2s;
+  }
+
+  .drink-card:hover { transform: translateY(-3px); }
+
+  .drink-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: var(--soft-green);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .drink-icon.img-drop-zone .drop-hint {
+    font-size: 0.55rem;
+    gap: 0;
+    padding: 0.2rem;
+  }
+
+  .drink-icon.img-drop-zone .drop-hint-icon { font-size: 1rem; }
+
+  .drink-icon.img-drop-zone .remove-img-btn {
+    width: 18px; height: 18px;
+    top: 2px; right: 2px;
+    font-size: 0.6rem;
+  }
+
+  .drink-icon.has-image .drink-icon-emoji { display: none; }
+
+  .drink-info { flex: 1; min-width: 0; }
+
+  .drink-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .drink-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .drink-temp {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 50px;
+  }
+
+  .drink-temp.hot { background: rgba(255,90,70,0.12); color: #e04a30; }
+  .drink-temp.ice { background: rgba(70,130,220,0.12); color: #2f6fc2; }
+
+  .drink-price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--matcha-dark);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 900px) {
+    .drink-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .drink-grid { grid-template-columns: 1fr; }
+    .drink-tab-nav { gap: 0.3rem; }
+    .drink-tab-btn { font-size: 0.72rem; padding: 0.45rem 0.9rem; }
+  }
+
+  /* ===== SWEETS FARM 事業の沿革 ===== */
+  .sf-history-section {
+    background: linear-gradient(180deg, var(--warm-white) 0%, var(--cream) 100%);
+    padding-bottom: 5rem;
+  }
+
+  .sf-history-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .sf-timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  /* 縦ライン */
+  .sf-timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg,
+      var(--coral) 0%,
+      var(--peach) 30%,
+      rgba(200,200,200,0.4) 60%,
+      var(--matcha) 100%);
+    border-radius: 3px;
+  }
+
+  .sf-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 0.8rem 1.2rem;
+    align-items: start;
+    padding: 1.1rem 1.4rem 1.1rem 0;
+    border-bottom: 1px solid rgba(107,66,38,0.08);
+    transition: background 0.2s;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .sf-item:last-child { border-bottom: none; }
+  .sf-item:hover { background: rgba(255,255,255,0.7); }
+
+  /* 丸いドット */
+  .sf-dot {
+    position: absolute;
+    left: -2rem;
+    top: 1.4rem;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--peach);
+    background: var(--peach);
+    transition: transform 0.2s;
+  }
+
+  .sf-item:hover .sf-dot { transform: scale(1.2); }
+  .sf-item.sf-close .sf-dot { background: #bbb; box-shadow: 0 0 0 2px #bbb; }
+  .sf-item.sf-current .sf-dot {
+    background: var(--matcha);
+    box-shadow: 0 0 0 2px var(--matcha), 0 0 0 5px rgba(125,174,106,0.3);
+    animation: pulse-dot 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 2px var(--matcha), 0 0 0 5px rgba(125,174,106,0.3); }
+    50% { box-shadow: 0 0 0 2px var(--matcha), 0 0 0 10px rgba(125,174,106,0); }
+  }
+
+  /* 年ラベル */
+  .sf-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--coral);
+    padding-top: 0.15rem;
+    line-height: 1.3;
+  }
+
+  .sf-item.sf-close .sf-year { color: #999; }
+  .sf-item.sf-current .sf-year { color: var(--matcha-dark); }
+
+  /* コンテンツ部分 */
+  .sf-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  /* 開店・閉店タグ */
+  .sf-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.15rem 0.65rem;
+    border-radius: 50px;
+    width: fit-content;
+    letter-spacing: 0.05em;
+  }
+
+  .sf-tag--open    { background: rgba(255,122,92,0.12); color: var(--coral); border: 1px solid rgba(255,122,92,0.3); }
+  .sf-tag--close   { background: rgba(150,150,150,0.1); color: #888; border: 1px solid rgba(150,150,150,0.3); }
+  .sf-tag--current { background: rgba(125,174,106,0.15); color: var(--matcha-dark); border: 1px solid rgba(125,174,106,0.4); }
+
+  .sf-place {
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .sf-name {
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+
+  .sf-item.sf-close .sf-name { color: #999; text-decoration: line-through; text-decoration-color: #ccc; }
+  .sf-item.sf-current .sf-name { color: var(--matcha-dark); }
+
+  .sf-note {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 1em;
+  }
+
+  /* co-editable がsf-timeline内でも機能 */
+  .sf-history-section.edit-mode .sf-year.co-editable,
+  .sf-history-section .sf-content .co-editable {
+    cursor: text;
+  }
+
+  .sf-edit-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-top: 2.5rem;
+  }
+
+  .sf-edit-note strong { color: var(--coral); font-weight: 700; }
+
+  @media (max-width: 700px) {
+    .sf-item { grid-template-columns: 55px 1fr; gap: 0.6rem 0.8rem; }
+    .sf-dot  { left: -1.8rem; }
+    .sf-history-inner { padding: 0 1rem; }
+  }
+
+  /* =========================================
+     EC SHOP — 商品カタログ（STORES BUTTON埋め込み方式）
+     ========================================= */
+
+  .ec-section { background: var(--cream); padding-bottom: 6rem; }
+
+  .shop-cta-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .shop-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white;
+    text-decoration: none;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.1rem 2.6rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 25px rgba(255,122,92,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .shop-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(255,122,92,0.5);
+  }
+  .ec-section .section-header { margin-bottom: 2rem; }
+
+  /* ── カテゴリータブ ── */
+  .ec-cat-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .ec-cat-btn {
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    border: 2px solid rgba(107,66,38,0.2);
+    background: white;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-mid);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .ec-cat-btn.active {
+    background: var(--text-dark);
+    color: white;
+    border-color: var(--text-dark);
+  }
+
+  .ec-cat-btn:hover:not(.active) {
+    border-color: var(--coral);
+    color: var(--coral);
+  }
+
+  /* ── 商品グリッド ── */
+  .ec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ec-product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .ec-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(107,66,38,0.16);
+  }
+
+  .ec-product-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--soft-peach), var(--soft-green));
+  }
+
+  .ec-product-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .ec-product-card:hover .ec-product-img-wrap img { transform: scale(1.05); }
+
+  .ec-badge {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: var(--coral);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  .ec-badge.matcha { background: var(--matcha); }
+  .ec-badge.goods  { background: var(--brown); }
+
+  .ec-cold-tag {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: rgba(50,120,220,0.85);
+    color: white;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: 50px;
+  }
+
+  .ec-product-body {
+    padding: 1.2rem 1.2rem 0.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .ec-product-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+
+  .ec-product-unit {
+    font-size: 0.72rem;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .ec-product-desc {
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .ec-product-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--coral);
+  }
+
+  .ec-product-price span {
+    font-size: 0.75rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* ── STORES BUTTON 埋め込み枠 ── */
+  .ec-product-footer {
+    padding: 0 1.2rem 1.2rem;
+  }
+
+  .stores-btn-slot {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* コードがまだ設定されていない時のプレースホルダー */
+  .stores-btn-placeholder {
+    width: 100%;
+    background: repeating-linear-gradient(
+      135deg, rgba(107,66,38,0.05), rgba(107,66,38,0.05) 8px,
+      rgba(107,66,38,0.09) 8px, rgba(107,66,38,0.09) 16px
+    );
+    border: 1.5px dashed rgba(107,66,38,0.3);
+    border-radius: 50px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-mid);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .stores-btn-placeholder small {
+    display: block;
+    font-weight: 300;
+    font-size: 0.66rem;
+    opacity: 0.75;
+    margin-top: 0.15rem;
+  }
+
+  @media (max-width: 900px) {
+    .ec-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .ec-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== TABS ===== */
+  .tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 50px;
+    padding: 0.4rem;
+    box-shadow: 0 4px 20px var(--shadow);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tab-btn {
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-mid);
+    transition: all 0.2s;
+  }
+
+  .tab-btn.active {
+    background: linear-gradient(135deg, var(--coral), var(--peach));
+    color: white;
+  }
+
+  .tab-btn.active.green {
+    background: linear-gradient(135deg, var(--matcha), var(--matcha-dark));
+  }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 0.78rem; }
+
+    .hero-content { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+    .hero-visual { order: -1; }
+
+    .stores-grid { grid-template-columns: 1fr; gap: 2rem; }
+    section { padding: 4rem 1.5rem; }
+
+    .shop-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-values { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .store-links { gap: 0.5rem; }
+    .link-btn { font-size: 0.72rem; padding: 0.4rem 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="main-nav">
+  <a class="nav-logo" href="#hero"><img src="images/sweets-farm-logo.png" alt="Kuju Kogen Sweets Farm"></a>
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ドロップダウンメニュー -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-inner">
+    <div class="nav-drawer-group">
+      <div class="nav-drawer-group-title">店舗・メニュー</div>
+      <ul>
+        <li><a href="#stores"    onclick="closeNav()"><span class="nav-icon">🏪</span>店舗案内</a></li>
+        <li><a data-link="flavors" href="#flavors" onclick="closeNav()"><span class="nav-icon">🍦</span>ジェラートフレーバー</a></li>
+        <li><a data-link="drinks"  href="#drinks"  onclick="closeNav()"><span class="nav-icon">☕</span>ドリンクメニュー</a></li>
+        <li><a data-link="food"    href="#drinks"  onclick="closeNav()"><span class="nav-icon">🍽</span>食事メニュー</a></li>
+      </ul>
+    </div>
+    <div class="nav-drawer-group">
+      <div class="nav-drawer-group-title">ご注文・通販</div>
+      <ul>
+        <li><a href="https://ooitagelato.stores.jp/" target="_blank"><span class="nav-icon">🛍</span>オンラインショップ（STORES）</a></li>
+      </ul>
+      <a href="https://ooitagelato.stores.jp/" target="_blank" class="nav-order-btn">🛒 オンライン注文</a>
+    </div>
+    <div class="nav-drawer-group">
+      <div class="nav-drawer-group-title">こだわり・情報</div>
+      <ul>
+        <li><a href="#about"     onclick="closeNav()"><span class="nav-icon">🌿</span>私たちのこだわり</a></li>
+        <li><a href="#news"      onclick="closeNav()"><span class="nav-icon">📰</span>お知らせ</a></li>
+        <li><a href="#contact"   onclick="closeNav()"><span class="nav-icon">📍</span>お問い合わせ・アクセス</a></li>
+      </ul>
+    </div>
+    <div class="nav-drawer-group">
+      <div class="nav-drawer-group-title">会社情報</div>
+      <ul>
+        <li><a href="#company"    onclick="closeNav()"><span class="nav-icon">🏢</span>運営会社 スペースアド</a></li>
+        <li><a href="#sf-history" onclick="closeNav()"><span class="nav-icon">📋</span>Sweets Farm 事業の沿革</a></li>
+        <li><a href="spacead_corporate.html" target="_blank"><span class="nav-icon">🔗</span>スペースアド 企業サイト</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ページトップへ戻るボタン -->
+<a class="back-to-top" href="#hero" id="backToTop" title="ページトップへ">↑</a>
+
+<!-- HERO: Kuju Mountain Scene -->
+<section class="hero" id="hero">
+
+  <!-- くじゅう連山 写真背景（ゆっくりズーム） -->
+  <div class="hero-photo-bg"></div>
+
+  <!-- 空気感を出す薄いオーバーレイ -->
+  <div class="hero-photo-overlay"></div>
+
+  <!-- 流れる雲（写真に重なる白い霞） -->
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+
+  <!-- 飛ぶ鳥 -->
+  <div class="birds">
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+  </div>
+
+  <!-- ひらひら舞う花びら -->
+  <div class="petal" style="left:8%;  animation-duration:10s; animation-delay:0s;   top:-20px;">🌸</div>
+  <div class="petal" style="left:22%; animation-duration:14s; animation-delay:-5s;  top:-20px;">🌼</div>
+  <div class="petal" style="left:35%; animation-duration:12s; animation-delay:-8s;  top:-20px;">🌸</div>
+  <div class="petal" style="left:52%; animation-duration:9s;  animation-delay:-2s;  top:-20px;">🌿</div>
+  <div class="petal" style="left:68%; animation-duration:16s; animation-delay:-11s; top:-20px;">🌸</div>
+  <div class="petal" style="left:82%; animation-duration:11s; animation-delay:-6s;  top:-20px;">🌼</div>
+  <div class="petal" style="left:91%; animation-duration:13s; animation-delay:-3s;  top:-20px;">🌸</div>
+
+  <!-- Hero text overlay -->
+  <div class="hero-overlay-content">
+    <p class="hero-tagline editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-tagline">有限会社スペース・アド ✦ 大分・くじゅう高原</p>
+    <h1 class="editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-title" data-multiline="true">
+      くじゅう連山の麓で<br>
+      <em>生まれるジェラート</em>
+    </h1>
+    <p class="hero-sub editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-sub" data-multiline="true">
+      標高850m、阿蘇くじゅう国立公園の花公園に佇むジェラート工房。<br>
+      大自然が育んだ恵みを、まるごとジェラートに。
+    </p>
+    <div class="hero-badges">
+      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-1">🌸 くじゅう花公園</span>
+      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-2">🍵 湯布院 金鱗茶屋</span>
+      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-3">📦 全国通販対応</span>
+      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-4">🥛 無添加・無着色</span>
+    </div>
+    <div class="hero-cta">
+      <a href="https://ooitagelato.stores.jp/" target="_blank" class="btn-primary">🛒 オンラインショップ</a>
+      <a href="#stores" class="btn-secondary">店舗を見る</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">SCROLL</div>
+
+  <!-- Drop zone: real shop photo (polaroid) -->
+  <div class="hero-photo-frame">
+    <div class="hero-photo-inner img-drop-zone" data-key="hero-photo" data-default="images/sweets-farm-storefront-portrait.jpg">
+      <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
+      <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の実写真を<br>ドロップ or クリック</div>
+      <button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button>
+      <div class="hero-photo-placeholder"><span class="icon">🏔️🍦</span>実際の店舗写真</div>
+    </div>
+    <p class="hero-photo-caption editable-text" contenteditable="true" spellcheck="false" data-edit-key="hero-photo-caption">SWEETS FARM</p>
+  </div>
+
+</section>
+
+<!-- STORES -->
+<section class="stores-section" id="stores">
+  <div class="section-header fade-up">
+    <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-1">Our Shops</span>
+    <h2 class="section-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-title-1"><a href="#stores" class="section-anchor">2つのジェラテリア</a></h2>
+    <p class="section-desc editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-desc-1" data-multiline="true">大自然の中で、丁寧に作られたジェラートをお楽しみください。</p>
+  </div>
+  <p class="edit-hint fade-up">💡 写真エリアは<strong>ドラッグ&ドロップ</strong>で差し替え、文字は<strong>クリックして直接編集</strong>できます</p>
+
+  <div class="stores-grid">
+    <!-- SWEETS FARM -->
+    <div class="store-card fade-up">
+      <div class="store-header farm img-drop-zone" data-key="store-farm" data-default="images/sweets-farm-storefront-wide.jpg">
+        <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
+        <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の写真をドロップ<br>または クリックして変更</div>
+        <button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button>
+        <span class="store-tag farm-tag editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-tag-1">SWEETS FARM</span>
+        <span class="store-emoji">🌸</span>
+        <h2 class="store-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-name-1" data-multiline="true">Sweets Farm<br>シャーロット</h2>
+        <p class="store-name-sub editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-name-sub-1">くじゅう花公園内 ジェラテリア＆カフェ</p>
+      </div>
+      <div class="store-body">
+        <p class="store-desc editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-desc-1" data-multiline="true">
+          阿蘇くじゅう国立公園・標高850mの花公園の中に位置するジェラート工房。くじゅう高原産の搾りたて生乳100%を使い、毎日丁寧に手作りしています。添加物・着色料一切不使用。花々に囲まれながら、心のこもった味をご堪能ください。
+        </p>
+        <div class="store-features">
+          <span class="feature-chip editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-1">🥛 くじゅう高原産生乳100%</span>
+          <span class="feature-chip editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-2">🚫 無添加・無着色</span>
+          <span class="feature-chip editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-3">🌺 花公園内</span>
+          <span class="feature-chip editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-4">📦 通販対応</span>
+          <span class="feature-chip editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-5">🎁 ギフトセット</span>
+        </div>
+        <div class="store-rating">
+          <span class="rating-stars">★★★★☆</span>
+          <span class="rating-num editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-rating-1">4.1</span>
+          <a href="https://maps.google.com/?cid=13697685978062008092" target="_blank" class="rating-link editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-rating-link-1">Google口コミ 27件を見る →</a>
+        </div>
+        <div class="store-info editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-info-1" data-multiline="true">
+          <strong>📍 住所：</strong>〒878-0201 大分県竹田市久住町大字久住4050 くじゅう花公園内<br>
+          <strong>🕐 営業時間：</strong>9:00〜17:00（年中無休・冬季休業あり）<br>
+          <strong>📞 TEL：</strong>070-8966-8163<br>
+          <strong>🍽 メニュー：</strong>ジェラート／パスタ／チキンライス／カフェ
+        </div>
+        <div class="store-links">
+          <a href="https://maps.google.com/?cid=13697685978062008092" target="_blank" class="link-btn link-map">
+            📍 Google Maps
+          </a>
+          <a data-link="shop" href="https://ooitagelato.stores.jp/" target="_blank" class="link-btn link-shop">
+            🛒 公式通販（STORES）
+          </a>
+          <a data-link="flavors" href="#flavors" class="link-btn link-menu">
+            🍦 フレーバー一覧
+          </a>
+          <a data-link="drinks" href="#drinks" class="link-btn link-menu">
+            ☕ ドリンクメニュー
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 金鱗茶屋 -->
+    <div class="store-card fade-up">
+      <div class="store-header matcha img-drop-zone" data-key="store-matcha">
+        <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
+        <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の写真をドロップ<br>または クリックして変更</div>
+        <button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button>
+        <span class="store-tag matcha-tag editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-tag-2">金鱗茶屋</span>
+        <span class="store-emoji">🍵</span>
+        <h2 class="store-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-name-2" data-multiline="true">金鱗茶屋 Sweets farm cafe</h2>
+        <p class="store-name-sub editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-name-sub-2">湯布院 抹茶ジェラテリア</p>
+      </div>
+      <div class="store-body">
+        <p class="store-desc editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-desc-2" data-multiline="true">
+          大分県湯布院の金鱗湖エリアに佇む、こだわりの抹茶商品を中心においたジェラテリア。厳選した高級茶葉と湯布院牛乳を使用した、本格的な茶葉ジェラートをご提供しています。抹茶ラテ・ほうじ茶ラテも人気です。
+        </p>
+        <div class="store-features">
+          <span class="feature-chip green editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-6">🍵 抹茶専門</span>
+          <span class="feature-chip green editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-7">🐄 湯布院牛乳</span>
+          <span class="feature-chip green editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-8">🏔 湯布院金鱗湖</span>
+          <span class="feature-chip green editable-text" contenteditable="true" spellcheck="false" data-edit-key="feature-chip-9">🥡 テイクアウト対応</span>
+        </div>
+        <div class="store-rating">
+          <span class="rating-stars">★★★★★</span>
+          <span class="rating-num editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-rating-2">4.6</span>
+          <a href="https://maps.google.com/?cid=11436345148952836568" target="_blank" class="rating-link editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-rating-link-2">Google口コミ 21件を見る →</a>
+        </div>
+        <div class="store-info editable-text" contenteditable="true" spellcheck="false" data-edit-key="store-info-2" data-multiline="true">
+          <strong>📍 住所：</strong>〒879-5102 大分県由布市湯布院町川上1551-11<br>
+          <strong>🕐 営業時間：</strong>10:00〜16:00（不定休）<br>
+          <strong>🍵 人気：</strong>抹茶ラテ／ほうじ茶ラテ／抹茶アフォガート<br>
+          <strong>📞 お問い合わせ：</strong>sweetsfarm910@gmail.com
+        </div>
+        <div class="store-links">
+          <a href="https://maps.google.com/?cid=11436345148952836568" target="_blank" class="link-btn link-map">
+            📍 Google Maps
+          </a>
+          <a data-link="shop" href="https://ooitagelato.stores.jp/" target="_blank" class="link-btn link-shop">
+            🛒 公式通販（STORES）
+          </a>
+          <a data-link="flavors" href="#flavors" class="link-btn link-menu">
+            🍦 フレーバー一覧
+          </a>
+          <a data-link="drinks" href="#drinks" class="link-btn link-menu">
+            ☕ ドリンクメニュー
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- くじゅうの山が見える帯 -->
+<div class="kuju-band">
+  <p class="kuju-band-text editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="band-text-1">Fresh from Kuju Highland</p>
+</div>
+
+<!-- FLAVOR MENU -->
+<section class="flavors-section" id="flavors">
+  <div class="section-header fade-up">
+    <span class="section-label">Flavor Menu</span>
+    <h2 class="section-title"><a href="#flavors" class="section-anchor">ジェラートフレーバー</a></h2>
+    <p class="section-desc">くじゅうの大自然が育んだ、季節ごとの味をお楽しみください。</p>
+  </div>
+
+  <div class="price-bar fade-up">
+    <div class="price-card">
+      <div class="scoop">🍦</div>
+      <div class="size-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-single-name">シングル</div>
+      <div class="price-yen editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-single">¥450</div>
+    </div>
+    <div class="price-card">
+      <div class="scoop">🍨</div>
+      <div class="size-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-double-name">ダブル</div>
+      <div class="price-yen editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-double">¥600</div>
+    </div>
+    <div class="price-card">
+      <div class="scoop">🍧</div>
+      <div class="size-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-triple-name">トリプル</div>
+      <div class="price-yen editable-text" contenteditable="true" spellcheck="false" data-edit-key="price-triple">¥700</div>
+    </div>
+  </div>
+
+  <div class="flavor-tab-nav fade-up">
+    <button class="flavor-tab-btn active" onclick="switchFlavorTab('all', this)">オールシーズン</button>
+    <button class="flavor-tab-btn" onclick="switchFlavorTab('spring', this)">🌸 春</button>
+    <button class="flavor-tab-btn" onclick="switchFlavorTab('summer', this)">☀️ 夏</button>
+    <button class="flavor-tab-btn" onclick="switchFlavorTab('autumn', this)">🍂 秋</button>
+    <button class="flavor-tab-btn" onclick="switchFlavorTab('lucky', this)">🍀 見つけたら幸運</button>
+  </div>
+
+  <!-- All Season -->
+  <div id="flavortab-all" class="flavor-tab-content active fade-up">
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-milk" data-default="images/flavors/milk.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🥛</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-milk">しぼりたてミルク</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-strawberry" data-default="images/flavors/strawberry.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍓</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-strawberry">つぶいちご</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-blueberry" data-default="images/flavors/blueberry.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🫐</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-blueberry">ブルーベリー</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-lavender" data-default="images/flavors/lavender.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">💜</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-lavender">ラベンダー</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-chocolate" data-default="images/flavors/chocolate.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍫</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-chocolate">チョコレート</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-matcha" data-default="images/flavors/matcha.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍵</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-matcha">宇治抹茶</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-rumraisin" data-default="images/flavors/rum-raisin.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🥃</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-rumraisin">ラム・レーズン</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-rose" data-default="images/flavors/rose.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌹</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-rose">ダマスクローズ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spring -->
+  <div id="flavortab-spring" class="flavor-tab-content fade-up">
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-sakura" data-default="images/flavors/sakura.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌸</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-sakura">桜</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-luxstrawberry" data-default="images/flavors/luxstrawberry.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍓</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-luxstrawberry">贅沢いちご</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summer -->
+  <div id="flavortab-summer" class="flavor-tab-content fade-up">
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-pineapple" data-default="images/flavors/pineapple.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍍</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-pineapple">パイナップル</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-lemongrass" data-default="images/flavors/lemongrass.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌿</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-lemongrass">レモングラスティー&フルーツ</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-mint" data-default="images/flavors/mint.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌱</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-mint">高原フレッシュミント</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-shirokuma" data-default="images/flavors/shirokuma.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍊</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-shirokuma">高原のシロクマ君</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Autumn -->
+  <div id="flavortab-autumn" class="flavor-tab-content fade-up">
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-pear" data-default="images/flavors/pear.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍐</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-pear">梨</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-chestnut" data-default="images/flavors/chestnut.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌰</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-chestnut">栗・マロンモンブラン</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucky find -->
+  <div id="flavortab-lucky" class="flavor-tab-content fade-up">
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-mixedberry" data-default="images/flavors/mixedberry.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🫐</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-mixedberry">ミックスベリーフォレスト</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-yogurt" data-default="images/flavors/yogurt.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🥛</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-yogurt">ヨーグルト</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-veganoats"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌾</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-veganoats">ビーガンオーツミルク（焙煎緑茶）</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-blacksesame" data-default="images/flavors/blacksesame.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">⚫</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-blacksesame">黒ゴマ</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-cafeaulait" data-default="images/flavors/cafeaulait.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">☕</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-cafeaulait">カフェオレ</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-earlgrey" data-default="images/flavors/earlgrey.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🫖</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-earlgrey">アールグレイティー</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-raspberry" data-default="images/flavors/raspberry.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍓</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-raspberry">ラズベリー</div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-hojicha" data-default="images/flavors/hojicha.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🍵</span></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-hojicha">焙煎ほうじ茶</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="flavor-footnote fade-up editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-footnote" data-multiline="true">
+    ※ フレーバーは季節や仕入れ状況により変更になる場合があります。
+  </p>
+</section>
+
+<!-- CAFE DRINK MENU -->
+<section class="drinks-section" id="drinks">
+  <div class="section-header fade-up">
+    <span class="section-label">Cafe Menu</span>
+    <h2 class="section-title"><a href="#drinks" class="section-anchor">カフェドリンクメニュー</a></h2>
+    <p class="section-desc">ジェラートと一緒に、店内でゆっくりお楽しみいただけるドリンクです。</p>
+  </div>
+
+  <div class="drink-tab-nav fade-up">
+    <button class="drink-tab-btn active" onclick="switchDrinkTab('coffee', this)">☕ コーヒー</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('milk', this)">🥛 ミルク&ヨーグルト</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('smoothie', this)">🥤 スムージー</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('shake', this)">🍨 ジェラートシェイク</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('tea', this)">🍵 ティー</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('soda', this)">🫧 ソーダ</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('soft', this)">🧃 ソフトドリンク</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('alcohol', this)">🍺 アルコール</button>
+    <button class="drink-tab-btn" onclick="switchDrinkTab('food', this)">🍽 食事メニュー</button>
+  </div>
+
+  <!-- Coffee -->
+  <div id="drinktab-coffee" class="drink-tab-content active fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-blend" data-default="images/drinks/blend.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">☕</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-blend">ブレンドコーヒー</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-blend">¥350</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-americano" data-default="images/drinks/americano.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">☕</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-americano">アメリカーノ</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-americano">¥350</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-lattejelly" data-default="images/drinks/lattejelly.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍮</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-lattejelly">黒糖ラテ・ゼリー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-lattejelly">¥650</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-cafelatte" data-default="images/drinks/cafelatte.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥛</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-cafelatte">カフェ・ラテ（黒糖牛乳）</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-cafelatte">¥500</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-caramellatte" data-default="images/drinks/caramellatte.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍯</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-caramellatte">キャラメルラテ（黒糖牛乳）</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-caramellatte">¥550</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-cafemocha" data-default="images/drinks/cafemocha.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍫</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-cafemocha">カフェ・モカ（黒糖牛乳）</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-cafemocha">¥550</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Milk & Yogurt -->
+  <div id="drinktab-milk" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-kujumilk" data-default="images/drinks/kujumilk.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥛</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-kujumilk">久住高原ミルク</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-kujumilk">¥400</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-strawberrymilk" data-default="images/drinks/strawberrymilk.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍓</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-strawberrymilk">くじゅう高原いちごミルク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-strawberrymilk">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-strawberryyogurt" data-default="images/drinks/strawberryyogurt.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍓</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-strawberryyogurt">濃厚いちごヨーグルト</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-strawberryyogurt">¥700</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-mixberryyogurt" data-default="images/drinks/mixberryyogurt.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🫐</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-mixberryyogurt">贅沢ミックスベリーヨーグルト</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-mixberryyogurt">¥650</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smoothie -->
+  <div id="drinktab-smoothie" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-mangosmoothie" data-default="images/drinks/mangosmoothie.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥭</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-mangosmoothie">マンゴースムージー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-mangosmoothie">¥650</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-strawsmoothie" data-default="images/drinks/strawsmoothie.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍓</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-strawsmoothie">ストロベリースムージー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-strawsmoothie">¥650</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-bluesmoothie" data-default="images/drinks/bluesmoothie.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🫐</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-bluesmoothie">ブルーベリースムージー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-bluesmoothie">¥650</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-mixsmoothie" data-default="images/drinks/mixsmoothie.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍇</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-mixsmoothie">ミックスベリースムージー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-mixsmoothie">¥650</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gelato Shake -->
+  <div id="drinktab-shake" class="drink-tab-content fade-up">
+    <p style="text-align:center; font-size:0.8rem; color:var(--text-mid); font-weight:300; margin-top:-1.5rem; margin-bottom:2rem;">Sweets Farm Cafe 特別なジェラート×ミルクのシェイクメニュー</p>
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-milkshake" data-default="images/drinks/milkshake.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍦</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-milkshake">ミルクジェラートシェイク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-milkshake">¥700</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-strawshake" data-default="images/drinks/strawshake.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍓</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-strawshake">ストロベリージェラートシェイク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-strawshake">¥800</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-chocshake" data-default="images/drinks/chocshake.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍫</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-chocshake">濃厚チョコレートジェラートシェイク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-chocshake">¥800</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-matchashake" data-default="images/drinks/matchashake.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍵</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-matchashake">濃い抹茶ジェラートシェイク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-matchashake">¥800</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-blueshake" data-default="images/drinks/blueshake.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🫐</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-blueshake">ブルーベリージェラートシェイク</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-blueshake">¥800</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tea -->
+  <div id="drinktab-tea" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-earlgreytea" data-default="images/drinks/earlgreytea.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍵</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-earlgreytea">アールグレイティー</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-earlgreytea">¥500</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-lemontea" data-default="images/drinks/lemontea.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍋</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-lemontea">レモンティー</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-lemontea">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-appletea" data-default="images/drinks/appletea.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍎</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-appletea">アップルティー</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-appletea">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-berrytea" data-default="images/drinks/berrytea.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍓</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-berrytea">ミックスベリーティー</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-berrytea">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-hojichalatte" data-default="images/drinks/hojichalatte.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍵</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-hojichalatte">ほうじ茶ラテ</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-hojichalatte">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-matchalatte" data-default="images/drinks/matchalatte.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍵</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-matchalatte">抹茶ラテ</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-matchalatte">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-fruittea" data-default="images/drinks/fruittea.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍑</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-fruittea">ミックスフルーツティー</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-fruittea">¥650</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soda -->
+  <div id="drinktab-soda" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon">🫧</div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-water">炭酸水</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-water">¥300</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-lemonsoda" data-default="images/drinks/lemonsoda.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍋</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-lemonsoda">レモネードソーダ</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-lemonsoda">¥500</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon">🌹</div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-rosesoda">ローズソーダ</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-rosesoda">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon">🍇</div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-berrysoda">ミックスベリーソーダ</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-berrysoda">¥650</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft Drink -->
+  <div id="drinktab-soft" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-oolong" data-default="images/drinks/oolong.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍵</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-oolong">ウーロン茶</div>
+          <div class="drink-meta"><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-oolong">¥300</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-chocodrink" data-default="images/drinks/chocodrink.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍫</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-chocodrink">チョコレートドリンク</div>
+          <div class="drink-meta"><span class="drink-temp hot">HOT</span><span class="drink-temp ice">ICE</span><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-chocodrink">¥600</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-mangojuice" data-default="images/drinks/mangojuice.jpg"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥭</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-mangojuice">マンゴージュース</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-mangojuice">¥400</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alcohol -->
+  <div id="drinktab-alcohol" class="drink-tab-content fade-up">
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-beer"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍺</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-beer">アサヒ生ビール</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-beer">¥500</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 食事メニュー（シャーロット店内） -->
+  <div id="drinktab-food" class="drink-tab-content fade-up">
+    <p style="text-align:center; font-size:0.8rem; color:var(--text-mid); font-weight:300; margin-top:-1.5rem; margin-bottom:2rem;" class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-lead">くじゅう花公園内 シャーロット店の食事メニューです。※価格・内容は編集できます</p>
+    <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-pasta"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta">彩り野菜のペペロンチーノ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-chicken"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-chicken">チキンライス</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-chicken">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-pasta2"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta2">パスタ（季節のメニュー）</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta2">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-dessert"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍰</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-dessert">デザートプレート</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-dessert">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-set"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">☕</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-set">ランチセット（ドリンク付き）</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-set">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-kids"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🧒</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-kids">お子さまメニュー</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-kids">¥ ---</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EC ONLINE SHOP -->
+<section class="ec-section" id="shop">
+  <div class="section-header fade-up">
+    <span class="section-label">Online Shop</span>
+    <h2 class="section-title"><a href="https://ooitagelato.stores.jp/" target="_blank" class="section-anchor">全国へお届け こだわりジェラート通販</a></h2>
+    <p class="section-desc">久住高原産の搾りたて生乳と厳選素材で作った本格ジェラートを冷凍便で全国へ。ギフトセットもご用意。</p>
+  </div>
+
+  <div class="shop-cta-wrap fade-up">
+    <a href="https://ooitagelato.stores.jp/" target="_blank" class="shop-cta-btn">
+      🛒 オンラインショップ（STORES）を見る
+    </a>
+  </div>
+</section>
+
+
+<!-- くじゅうの山が見える帯 -->
+<div class="kuju-band">
+  <p class="kuju-band-text editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="band-text-2">Made with Love &amp; Nature</p>
+</div>
+
+<!-- ABOUT / VALUES -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="section-header fade-up">
+      <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-3">Our Commitment</span>
+      <h2 class="section-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-title-2"><a href="#about" class="section-anchor">私たちのこだわり</a></h2>
+      <p class="section-desc editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-desc-2" data-multiline="true">大分の豊かな自然と、職人の誠実な仕事。これが私たちのジェラートです。</p>
+    </div>
+    <div class="about-values">
+      <div class="value-card fade-up">
+        <span class="value-icon">🥛</span>
+        <h3 class="value-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-title-1" data-multiline="true">くじゅう高原産<br>搾りたて生乳</h3>
+        <p class="value-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-text-1" data-multiline="true">阿蘇くじゅう国立公園の大自然でのびのびと育った乳牛から毎日搾られる生乳100%を使用。コクとさっぱり感を両立しました。</p>
+      </div>
+      <div class="value-card fade-up">
+        <span class="value-icon">🚫</span>
+        <h3 class="value-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-title-2" data-multiline="true">無添加・無着色<br>安心安全</h3>
+        <p class="value-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-text-2" data-multiline="true">余計なものは一切使いません。素材本来の色と味を大切に。子どもから大人まで、安心してお召し上がりいただけます。</p>
+      </div>
+      <div class="value-card fade-up">
+        <span class="value-icon">👐</span>
+        <h3 class="value-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-title-3" data-multiline="true">毎日手作り<br>できたての味</h3>
+        <p class="value-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="value-text-3" data-multiline="true">高原の工房で、心を込めて毎日手作り。旬の素材を使ったフレーバーも季節ごとにご用意しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news-section" id="news">
+  <div class="news-inner">
+    <div class="section-header fade-up">
+      <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-4">News</span>
+      <h2 class="section-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-title-3"><a href="#news" class="section-anchor">お知らせ</a></h2>
+    </div>
+    <div class="news-list fade-up">
+      <div class="news-item">
+        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-1">2026.03.01</span>
+        <span class="news-cat farm editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-1">SWEETS FARM</span>
+        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-1">春の新フレーバー「さくら」「贅沢いちご」販売開始</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-2">2026.02.15</span>
+        <span class="news-cat matcha editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-2">金鱗茶屋</span>
+        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-2">バレンタイン限定「ショコラ抹茶」好評販売中</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-3">2026.02.01</span>
+        <span class="news-cat all editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-3">通販</span>
+        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-3">オンラインショップ全国発送対応スタートのお知らせ</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-4">2025.12.10</span>
+        <span class="news-cat farm editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-4">SWEETS FARM</span>
+        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-4">くじゅう花公園内店舗 冬季休業のお知らせ（工場は通常稼働）</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-5">2025.11.28</span>
+        <span class="news-cat all editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-5">お知らせ</span>
+        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-5">年末年始ギフトセット受付開始のご案内</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & MAP -->
+<section class="contact-section" id="contact">
+  <div class="section-header fade-up">
+    <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-5">Contact & Access</span>
+    <h2 class="section-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-title-4"><a href="#contact" class="section-anchor">お問い合わせ・アクセス</a></h2>
+    <p class="section-desc editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-desc-3" data-multiline="true">通販のご注文・各種お問い合わせはこちらからどうぞ。</p>
+  </div>
+
+  <div class="contact-inner">
+    <div class="contact-form fade-up">
+      <h3 class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="contact-h3">お問い合わせフォーム</h3>
+      <p class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="contact-p">通販注文・店舗への質問・ギフトのご相談など、お気軽にどうぞ。</p>
+      <div class="form-group">
+        <label>お名前 *</label>
+        <input type="text" placeholder="山田 花子">
+      </div>
+      <div class="form-group">
+        <label>メールアドレス *</label>
+        <input type="email" placeholder="example@email.com">
+      </div>
+      <div class="form-group">
+        <label>電話番号</label>
+        <input type="tel" placeholder="090-0000-0000">
+      </div>
+      <div class="form-group">
+        <label>ご用件</label>
+        <select>
+          <option>通販注文について</option>
+          <option>ギフト・贈り物について</option>
+          <option>SWEETS FARM 店舗について</option>
+          <option>金鱗茶屋 店舗について</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>メッセージ</label>
+        <textarea placeholder="ご要望・ご質問をお書きください&#10;（ご希望フレーバー、数量、配送先など）"></textarea>
+      </div>
+      <button class="submit-btn">送信する</button>
+    </div>
+
+    <div class="maps-column fade-up">
+      <h3 class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="maps-h3">アクセスマップ</h3>
+
+      <div class="map-embed">
+        <div class="map-embed-label farm-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="map-embed-label-1">🌸 Sweets Farm シャーロット — くじゅう花公園内</div>
+        <iframe
+          src="https://www.google.com/maps?q=33.0479468,131.244223&z=15&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://maps.google.com/?cid=13697685978062008092" target="_blank" style="display:block; text-align:center; padding:0.5rem; font-size:0.75rem; color:#4285F4; font-weight:700; text-decoration:none;">Google Mapsで開く（口コミ・写真も見られます）→</a>
+      </div>
+
+      <div class="map-embed">
+        <div class="map-embed-label matcha-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="map-embed-label-2">🍵 金鱗茶屋 Sweets farm cafe — 湯布院</div>
+        <iframe
+          src="https://www.google.com/maps?q=33.2660891,131.3666267&z=16&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://maps.google.com/?cid=11436345148952836568" target="_blank" style="display:block; text-align:center; padding:0.5rem; font-size:0.75rem; color:#4285F4; font-weight:700; text-decoration:none;">Google Mapsで開く（口コミ・写真も見られます）→</a>
+      </div>
+
+      <div style="background: white; border-radius: 20px; padding: 1.5rem; box-shadow: 0 4px 20px var(--shadow);">
+        <p class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="sns-note" style="font-size: 0.85rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">📱 SNSでも最新情報を発信中</p>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <a href="https://www.facebook.com/" target="_blank" class="link-btn link-fb" style="flex: 1; justify-content: center;">Facebook</a>
+          <a href="https://www.instagram.com/" target="_blank" class="link-btn link-ig" style="flex: 1; justify-content: center;">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- くじゅうの山が見える帯 -->
+<div class="kuju-band">
+  <p class="kuju-band-text editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="band-text-3">Since 1983 — Oita, Japan</p>
+</div>
+
+<!-- COMPANY / OPERATING COMPANY -->
+<section class="company-section" id="company">
+
+  <!-- 編集モードトグル -->
+  <div class="co-edit-bar" id="coEditBar">
+    <button class="co-edit-toggle" id="coEditToggle" onclick="toggleCompanyEditMode()">
+      <span class="co-edit-icon">✏️</span>
+      <span class="co-edit-label">この会社情報を編集する</span>
+    </button>
+    <span class="co-edit-hint" id="coEditHint" style="display:none;">各テキストをクリックして編集できます。編集後は自動保存されます。</span>
+    <button class="co-edit-done" id="coEditDone" onclick="toggleCompanyEditMode()" style="display:none;">✅ 完了</button>
+  </div>
+
+  <!-- ヘッダー：書類スタイルのバナー -->
+  <div class="company-banner fade-up">
+    <div class="company-banner-logo">
+      <div class="sa-logo-mark">
+        <div class="sa-logo-square">
+          <span class="sa-inner-curve"></span>
+          <span class="sa-inner-dot"></span>
+        </div>
+        <div class="sa-logo-text">
+          <span class="sa-name co-editable" data-edit-key="co-saname">SPACE AD</span>
+          <span class="sa-sub co-editable" data-edit-key="co-sasub">TOTAL SPACE PLANNING</span>
+        </div>
+      </div>
+      <div class="company-banner-title">
+        <span class="co-editable" data-edit-key="co-banner-prefix">有限会社　</span><strong class="co-editable" data-edit-key="co-banner-name">スペースアド</strong>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+      <p class="company-banner-lead co-editable" data-edit-key="co-banner-lead">経営目線で事業の市場化をサポートします。</p>
+      <a href="spacead_corporate.html" target="_blank" style="white-space:nowrap; background:linear-gradient(135deg,var(--matcha),var(--matcha-dark)); color:white; padding:0.5rem 1.2rem; border-radius:50px; font-size:0.78rem; font-weight:700; text-decoration:none; box-shadow:0 3px 12px rgba(78,122,60,0.3); transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">🔗 企業サイトを見る</a>
+    </div>
+  </div>
+
+  <!-- くじゅう高原の山の背景 -->
+  <div class="company-mountain-bg"></div>
+
+  <div class="company-grid">
+    <!-- 左列：沿革 -->
+    <div class="fade-up">
+      <h3 class="company-card-title co-editable" data-edit-key="co-history-title">【沿　革】</h3>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y1">1983年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t1">大阪松下電工デザイン室退社後、大分市にて、有限会社スペースアド設立</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y2">業務</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t2">大分で大型施設の企画、運営サポート、店舗設計のデザイン、商品開発を中心に地域活性化事業も多く手がける。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y3">実績</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t3">過去に、東京・神奈川・大阪・兵庫・長野・愛媛・福岡・佐賀・熊本にてワーク実績。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y4">1986年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t4">大分県一村一品の推進メンバーとして、日田地域を3年間担当。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y5">継続</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t5">県内、県外の観光施設、物販施設の開発を数多く手がける。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y6">活性化</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t6">大分県の地域振興局、商工会議所の依頼のもと、各道の駅をはじめとして、商店や物販所の立ち上げや改善の提案をする「活性化アドバイザー」就任。現在も指導を続けている。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y7">2003年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t7">「第20回全国都市緑化おおいたフェア」ディレクター就任。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y8">2009年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t8">3月より1年間「くじゅう花公園」の代表に就任。経営の健全化、事業再生にあたる。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y9">冬季</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t9">竹田市冬季誘客対策推進協議会の会長に就任。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y10">主催</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t10">光ファンタジアくじゅう、光ファンタジア長湯主催。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year co-editable" data-edit-key="co-y11">2011年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t11">長湯癒しの里　代表に就任（長湯湖観光事業開発）。</div>
+        </div>
+        <div class="timeline-item timeline-item--highlight">
+          <div class="timeline-year co-editable" data-edit-key="co-y12">2007年</div>
+          <div class="timeline-text editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-t12">くじゅう花公園に【ジェラテリア　シャーロット】開業。<strong>Sweets Farm 事業の開始。</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右列：業務内容 + 会社情報 -->
+    <div class="fade-up">
+      <h3 class="company-card-title co-editable" data-edit-key="co-biz-title">【業務内容】</h3>
+      <p class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="co-biz-lead" style="font-size:0.85rem;color:var(--text-mid);margin-bottom:1.5rem;font-weight:300;">…経営目線で事業の市場化をサポートします。</p>
+
+      <div class="biz-flow">
+        <div class="biz-step">
+          <div class="biz-step-label co-editable" data-edit-key="co-step1-label">企画立案</div>
+          <div class="biz-step-detail">
+            <h4 class="co-editable" data-edit-key="co-step1-title">企画書作成</h4>
+            <ul>
+              <li class="co-editable" data-edit-key="co-step1-li1">ソフトイメージの提案</li>
+              <li class="co-editable" data-edit-key="co-step1-li2">ハードイメージの提案</li>
+              <li class="co-editable" data-edit-key="co-step1-li3">運営イメージの提案</li>
+            </ul>
+          </div>
+        </div>
+        <div class="biz-arrow">
+          <svg viewBox="0 0 22 26"><path d="M11 0 L11 18 M3 12 L11 22 L19 12" stroke="#7DAE6A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="biz-step">
+          <div class="biz-step-label co-editable" data-edit-key="co-step2-label">実行サポート</div>
+          <div class="biz-step-detail">
+            <h4 class="co-editable" data-edit-key="co-step2-title">施設開発管理 / デザイン・プランニング作業</h4>
+            <ul>
+              <li class="co-editable" data-edit-key="co-step2-li1">施設基本設計</li>
+              <li class="co-editable" data-edit-key="co-step2-li2">商品開発</li>
+              <li class="co-editable" data-edit-key="co-step2-li3">売場開発</li>
+              <li class="co-editable" data-edit-key="co-step2-li4">運営システム開発</li>
+            </ul>
+          </div>
+        </div>
+        <div class="biz-arrow">
+          <svg viewBox="0 0 22 26"><path d="M11 0 L11 18 M3 12 L11 22 L19 12" stroke="#7DAE6A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="biz-step">
+          <div class="biz-step-label co-editable" data-edit-key="co-step3-label">開業サポート</div>
+          <div class="biz-step-detail">
+            <h4 class="co-editable" data-edit-key="co-step3-title">販売促進サポート / 運営サポート</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- 会社情報カード -->
+      <div class="company-info-card">
+        <div class="co-info-name co-editable" data-edit-key="co-company-name">有限会社　スペースアド</div>
+        <div class="co-info-row"><span class="co-info-label">所在地</span><span class="co-editable co-info-val" data-edit-key="co-addr">〒879-5406　大分県由布市庄内町西長宝61</span></div>
+        <div class="co-info-row"><span class="co-info-label">代表者</span><span class="co-editable co-info-val" data-edit-key="co-rep">代表取締役　工藤　大地</span></div>
+        <div class="co-info-row"><span class="co-info-label">設立</span><span class="co-editable co-info-val" data-edit-key="co-est">1983年</span></div>
+        <div class="co-info-row"><span class="co-info-label">事業内容</span><span class="co-editable co-info-val" data-edit-key="co-biz">広告・企画事業／飲食店経営／通販事業</span></div>
+        <div class="co-info-row"><span class="co-info-label">連絡先</span><span class="co-editable co-info-val" data-edit-key="co-email">sweetsfarm910@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SWEETS FARM 事業の沿革 -->
+<section class="sf-history-section" id="sf-history">
+  <div class="section-header fade-up">
+    <span class="section-label">Business History</span>
+    <h2 class="section-title"><a href="#sf-history" class="section-anchor">Sweets Farm 事業の沿革</a></h2>
+    <p class="section-desc">くじゅう高原に生まれ、大分県内で育ってきたジェラテリア事業の歩みです。</p>
+  </div>
+
+  <div class="sf-history-inner fade-up">
+    <div class="sf-timeline">
+
+      <div class="sf-item sf-open">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y1">2007年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--open co-editable" data-edit-key="sf-tag1">開業</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place1">大分県 くじゅう花公園</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name1">【ジェラテリア　シャーロット】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note1">Sweets Farm 事業の開始。</div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-open">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y2">2010年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--open co-editable" data-edit-key="sf-tag2">開店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place2">大分県 竹田市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name2">【ジェラテリア　ジェラテリアくじゅう】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note2"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-open">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y3">2013年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--open co-editable" data-edit-key="sf-tag3">開店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place3">大分県 別府市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name3">【ジェラテリア　久住高原の店】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note3"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-close">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y4">2014年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--close co-editable" data-edit-key="sf-tag4">閉店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place4">大分県 竹田市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name4">【ジェラテリア　ジェラテリアくじゅう】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note4"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-open">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y5">2014年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--open co-editable" data-edit-key="sf-tag5">開店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place5">大分県 由布市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name5">【ジェラテリア　ジェラテリア由布】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note5"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-close">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y6">2016年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--close co-editable" data-edit-key="sf-tag6">閉店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place6">大分県 由布市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name6">【ジェラテリア　ジェラテリア由布】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note6"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-open">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y7">2019年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--open co-editable" data-edit-key="sf-tag7">開店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place7">大分県 大分市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name7">【ジェラテリア　Sweets Farm 大分オーパ店】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note7"></div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-close">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y8">2020年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--close co-editable" data-edit-key="sf-tag8">閉店</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place8">―</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name8">【ジェラテリア　久住高原の店】【Sweets Farm 大分オーパ店】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note8">コロナウイルスの影響に伴い閉店。</div>
+        </div>
+      </div>
+
+      <div class="sf-item sf-open sf-current">
+        <div class="sf-dot"></div>
+        <div class="sf-year co-editable" data-edit-key="sf-y9">2024年</div>
+        <div class="sf-content">
+          <div class="sf-tag sf-tag--current co-editable" data-edit-key="sf-tag9">開店・現在営業中</div>
+          <div class="sf-place co-editable" data-edit-key="sf-place9">大分県 由布市</div>
+          <div class="sf-name co-editable" data-edit-key="sf-name9">【Sweets Farm 金鱗茶屋】</div>
+          <div class="sf-note editable-text" contenteditable="true" spellcheck="false" data-edit-key="sf-note9"></div>
+        </div>
+      </div>
+
+    </div><!-- /.sf-timeline -->
+
+    <p class="sf-edit-note fade-up">
+      💡 各テキストは<strong>クリックして直接編集</strong>できます。新しい店舗・閉店情報も自由に追加できます。
+    </p>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#hero"><img src="images/sweets-farm-logo.png" alt="Kuju Kogen Sweets Farm"></a>
+        <p class="editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="footer-desc" data-multiline="true">
+          有限会社スペース・アド<br>
+          大分県の大自然が育む、こだわりのジェラートを。<br>
+          くじゅう花公園と湯布院、2つの店舗で皆様をお迎えします。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="#stores">店舗案内</a></li>
+          <li><a href="#flavors">フレーバー</a></li>
+          <li><a href="#drinks">カフェメニュー</a></li>
+          <li><a href="https://ooitagelato.stores.jp/" target="_blank">オンラインショップ</a></li>
+          <li><a href="#about">こだわり</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+          <li><a href="#company">運営会社</a></li>
+          <li><a href="#sf-history">事業の沿革</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SHOPS</h4>
+        <ul>
+          <li><a href="#stores">🌸 SWEETS FARM（くじゅう花公園）</a></li>
+          <li><a href="#stores">🍵 金鱗茶屋（湯布院）</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 有限会社スペース・アド SWEETS FARM / 金鱗茶屋. All rights reserved.</span>
+      <span style="display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap;">
+        <a href="spacead_corporate.html" style="color:rgba(255,255,255,0.7); font-weight:700; font-size:0.8rem; border:1px solid rgba(255,255,255,0.3); padding:0.2rem 0.8rem; border-radius:50px;">🏢 スペースアド企業サイト</a>
+        <a href="#" onclick="resetAllImages(); return false;" style="color:rgba(255,255,255,0.45); text-decoration:underline; font-size:0.75rem;">🖼️ 画像をリセット</a>
+        <a href="#" onclick="resetAllText(); return false;" style="color:rgba(255,255,255,0.45); text-decoration:underline; font-size:0.75rem;">✏️ 文字をリセット</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- HOW-TO LEGEND (dismissible) -->
+<div class="edit-legend" id="edit-legend">
+  <button class="legend-close" onclick="closeEditLegend()">✕</button>
+  <strong>✏️ 文字を編集</strong>：クリックして直接入力<br>
+  <strong>📷 写真を変更</strong>：画像をドラッグ&ドロップ<br>
+  内容は自動で保存されます。
+</div>
+
+<!-- ===== 管理者向け保存ツールバー（右端・縦型） ===== -->
+<div id="sf-toolbar" style="
+  position:fixed; top:50%; right:1rem; transform:translateY(-50%);
+  display:none; flex-direction:column; align-items:stretch; gap:0.5rem;
+  background:rgba(58,42,30,0.95); backdrop-filter:blur(10px);
+  padding:1rem 0.9rem; border-radius:18px;
+  box-shadow:-6px 0 30px rgba(0,0,0,0.3); z-index:9999;
+  width:170px;
+">
+  <span style="color:rgba(255,255,255,0.6); font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-align:center; margin-bottom:0.2rem;">⚙️ 管理ツール</span>
+  <button onclick="sfDownloadHTML()" style="background:var(--coral);color:white;border:none;border-radius:10px;padding:0.55rem 0.8rem;font-size:0.75rem;font-weight:700;cursor:pointer;text-align:left;">💾 HTMLで保存</button>
+  <button onclick="sfExportJSON()" style="background:var(--matcha);color:white;border:none;border-radius:10px;padding:0.55rem 0.8rem;font-size:0.75rem;font-weight:700;cursor:pointer;text-align:left;">⬇ データ書き出し</button>
+  <button onclick="sfImportJSON()" style="background:white;color:var(--text-dark);border:none;border-radius:10px;padding:0.55rem 0.8rem;font-size:0.75rem;font-weight:700;cursor:pointer;text-align:left;">⬆ データ読み込み</button>
+  <button onclick="document.getElementById('sf-toolbar').style.display='none';" style="background:rgba(255,255,255,0.12);color:white;border:none;border-radius:10px;padding:0.45rem;font-size:0.72rem;cursor:pointer;">✕ 閉じる</button>
+</div>
+<input type="file" id="sf-json-input" accept="application/json" style="display:none">
+
+<!-- 管理ツールバー表示ボタン（右下・小さく） -->
+<button onclick="document.getElementById('sf-toolbar').style.display='flex';"
+  style="position:fixed;bottom:1.2rem;right:1.2rem;z-index:9998;background:rgba(58,42,30,0.55);color:white;border:none;border-radius:50%;width:34px;height:34px;font-size:0.95rem;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,0.25);backdrop-filter:blur(6px);opacity:0.65;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="管理ツール">⚙️</button>
+
+<!-- STICKY ORDER BUTTON -->
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Tab switching
+  function switchTab(tab, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    btn.classList.add('active');
+    if (tab === 'matcha') btn.classList.add('green');
+    else btn.classList.remove('green');
+  }
+
+  // Flavor menu season tabs
+  function switchFlavorTab(tab, btn) {
+    document.querySelectorAll('.flavor-tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.flavor-tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('flavortab-' + tab).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Cafe drink menu category tabs
+  function switchDrinkTab(tab, btn) {
+    document.querySelectorAll('.drink-tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.drink-tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('drinktab-' + tab).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* ===================================================
+     ナビゲーション：ハンバーガー開閉 + スクロール検知
+     + 浮かぶ目次ハイライト + ページトップボタン
+     =================================================== */
+
+  function toggleNav() {
+    const hamburger = document.getElementById('navHamburger');
+    const drawer    = document.getElementById('navDrawer');
+    const isOpen    = drawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    // ドロワー開時はスクロール防止（任意）
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  function closeNav() {
+    const hamburger = document.getElementById('navHamburger');
+    const drawer    = document.getElementById('navDrawer');
+    drawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ドロワー外クリックで閉じる
+  document.addEventListener('click', (e) => {
+    const nav     = document.getElementById('main-nav');
+    const drawer  = document.getElementById('navDrawer');
+    if (drawer.classList.contains('open') && !nav.contains(e.target) && !drawer.contains(e.target)) {
+      closeNav();
+    }
+  });
+
+  // ── ページトップボタン & ナビ現在地ハイライト (スクロール連動) ──
+  const backTopEl   = document.getElementById('backToTop');
+  const sectionIds  = ['hero','stores','flavors','drinks','shop','about','news','contact','company','sf-history'];
+
+  function getActiveSection() {
+    const scrollY = window.scrollY + 100;
+    let active = sectionIds[0];
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) active = id;
+    }
+    return active;
+  }
+
+  function onScroll() {
+    const y = window.scrollY;
+
+    // ページトップボタン
+    if (y > 400) {
+      backTopEl.classList.add('visible');
+    } else {
+      backTopEl.classList.remove('visible');
+    }
+
+    // ドロワー内リンクの現在地ハイライト
+    const active = getActiveSection();
+    document.querySelectorAll('.nav-drawer-group ul a').forEach(a => {
+      const href = a.getAttribute('href');
+      a.classList.toggle('active-section', href === '#' + active);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // 初期化
+
+  // ── ページ内リンクのスムーズスクロール（オフセット考慮） ──
+  // イベント委譲方式：後から追加される要素にも確実に対応
+  document.addEventListener('click', function(e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    e.preventDefault();
+    e.stopPropagation();
+    closeNav();
+    const offset = 70; // nav高さ分オフセット
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    history.pushState(null, '', '#' + targetId);
+  });
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.style.boxShadow = '0 4px 30px rgba(107,66,38,0.12)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Form submit (demo)
+  document.querySelector('.submit-btn').addEventListener('click', function(e) {
+    this.textContent = '✅ 送信しました！折り返しご連絡いたします。';
+    this.style.background = '#7DAE6A';
+    setTimeout(() => {
+      this.textContent = '送信する';
+      this.style.background = '';
+    }, 4000);
+  });
+
+  /* ===================================================
+     画像のドラッグ&ドロップ / クリックで差し替え機能
+     - 各 .img-drop-zone に画像をドロップ、またはクリックして
+       ファイルを選択すると、その場で写真に切り替わります。
+     - 差し替えた画像はブラウザ内（localStorage）に保存され、
+       次回このページを開いたときも保持されます。
+     =================================================== */
+
+  const STORAGE_PREFIX = 'sweetsfarm_img_';
+
+  function applyImage(zone, dataUrl) {
+    zone.style.backgroundImage = "url('" + dataUrl + "')";
+    zone.classList.add('has-image');
+  }
+
+  function handleFiles(fileList, zone) {
+    if (!fileList || !fileList.length) return;
+    const file = fileList[0];
+    if (!file.type || !file.type.startsWith('image/')) {
+      alert('画像ファイル（JPG・PNG・WEBPなど）をお使いください。');
+      return;
+    }
+    // 大きすぎる画像は保存できない場合があるため軽く警告（保存自体は試みます）
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const dataUrl = e.target.result;
+      applyImage(zone, dataUrl);
+      const key = zone.dataset.key;
+      try {
+        localStorage.setItem(STORAGE_PREFIX + key, dataUrl);
+      } catch (err) {
+        console.warn('画像の保存に失敗しました（容量が大きすぎる可能性があります）', err);
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function handleFileInput(event, zone) {
+    handleFiles(event.target.files, zone);
+  }
+
+  function removeImage(event, zone) {
+    event.stopPropagation();
+    zone.style.backgroundImage = '';
+    zone.classList.remove('has-image');
+    const key = zone.dataset.key;
+    try { localStorage.removeItem(STORAGE_PREFIX + key); } catch (err) {}
+    const input = zone.querySelector('input[type="file"]');
+    if (input) input.value = '';
+  }
+
+  function resetAllImages() {
+    if (!confirm('差し替えた画像をすべて初期状態に戻します。よろしいですか？')) return;
+    document.querySelectorAll('.img-drop-zone').forEach(zone => {
+      try { localStorage.removeItem(STORAGE_PREFIX + zone.dataset.key); } catch (err) {}
+      const input = zone.querySelector('input[type="file"]');
+      if (input) input.value = '';
+      if (zone.dataset.default) {
+        // 既定の店舗写真がある場合はそれに戻す（完全な空白プレースホルダーには戻さない）
+        applyImage(zone, zone.dataset.default);
+      } else {
+        zone.style.backgroundImage = '';
+        zone.classList.remove('has-image');
+      }
+    });
+  }
+
+  // 各ドロップゾーンの初期化：保存済み画像 → 既定の店舗写真 → プレースホルダーの優先順で表示
+  document.querySelectorAll('.img-drop-zone').forEach(zone => {
+    const key = zone.dataset.key;
+    let restored = false;
+
+    // 1) ユーザーが過去にこのブラウザで差し替えた画像があれば最優先
+    try {
+      const saved = localStorage.getItem(STORAGE_PREFIX + key);
+      if (saved) { applyImage(zone, saved); restored = true; }
+    } catch (err) {}
+
+    // 2) なければ、あらかじめ設定された実際の店舗写真を表示
+    if (!restored && zone.dataset.default) {
+      applyImage(zone, zone.dataset.default);
+    }
+
+    // クリックでファイル選択を開く（✕ボタン・テキスト編集中のクリックは除外）
+    zone.addEventListener('click', (e) => {
+      if (e.target.closest('.remove-img-btn')) return;
+      if (e.target.closest('.editable-text')) return;
+      const input = zone.querySelector('input[type="file"]');
+      if (input) input.click();
+    });
+
+    // ドラッグ&ドロップ対応
+    zone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      zone.classList.add('drag-over');
+    });
+    zone.addEventListener('dragleave', () => {
+      zone.classList.remove('drag-over');
+    });
+    zone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      zone.classList.remove('drag-over');
+      handleFiles(e.dataTransfer.files, zone);
+    });
+  });
+
+  /* ===================================================
+     文字のクリック編集機能
+     - 見出しや説明文など、ページ内のほとんどの文字をクリックすると
+       その場で直接編集できます（ワープロのように）。
+     - 入力した内容はブラウザに自動保存され、次回開いたときも残ります。
+     - Enterキーで確定（複数行が必要な項目は改行も可能）。
+     =================================================== */
+
+  const TEXT_STORAGE_PREFIX = 'sweetsfarm_text_';
+
+  document.querySelectorAll('.editable-text').forEach(el => {
+    const key = el.dataset.editKey;
+
+    // 前回保存した文字があれば復元
+    try {
+      const saved = localStorage.getItem(TEXT_STORAGE_PREFIX + key);
+      if (saved !== null) el.innerHTML = saved;
+    } catch (err) {}
+
+    // 画像ドロップゾーンの中にある場合、クリックがファイル選択を開かないようにする
+    el.addEventListener('mousedown', (e) => e.stopPropagation());
+    el.addEventListener('click', (e) => e.stopPropagation());
+
+    // 単一行の項目は Enter で確定（改行を入れない）。複数行OKの項目は改行を許可。
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && el.dataset.multiline !== 'true') {
+        e.preventDefault();
+        el.blur();
+      }
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        el.blur();
+      }
+    });
+
+    // 編集が終わったら（フォーカスが外れたら）保存
+    el.addEventListener('blur', () => {
+      try {
+        localStorage.setItem(TEXT_STORAGE_PREFIX + key, el.innerHTML);
+      } catch (err) {
+        console.warn('文字の保存に失敗しました', err);
+      }
+    });
+  });
+
+  function resetAllText() {
+    if (!confirm('編集した文字をすべて初期状態に戻します。よろしいですか？')) return;
+    document.querySelectorAll('.editable-text').forEach(el => {
+      try { localStorage.removeItem(TEXT_STORAGE_PREFIX + el.dataset.editKey); } catch (err) {}
+    });
+    location.reload();
+  }
+
+  // 画面右下と左下の操作ヒント（一度閉じたら次回から表示しない）
+  function closeEditLegend() {
+    const legend = document.getElementById('edit-legend');
+    if (legend) legend.classList.add('hidden');
+    try { localStorage.setItem('sweetsfarm_legend_dismissed', '1'); } catch (err) {}
+  }
+
+  (function initLegend() {
+    try {
+      if (localStorage.getItem('sweetsfarm_legend_dismissed') === '1') {
+        const legend = document.getElementById('edit-legend');
+        if (legend) legend.classList.add('hidden');
+      }
+    } catch (err) {}
+  })();
+  /* ===================================================
+     運営会社セクション：編集モード切り替え
+     ボタンを押すと co-editable 要素がクリックして
+     直接編集できるようになります。
+     =================================================== */
+
+  const CO_TEXT_PREFIX = 'co_text_';
+
+  function toggleCompanyEditMode() {
+    const section = document.getElementById('company');
+    const isEdit = section.classList.toggle('edit-mode');
+    const toggle = document.getElementById('coEditToggle');
+    const hint   = document.getElementById('coEditHint');
+    const done   = document.getElementById('coEditDone');
+
+    if (isEdit) {
+      toggle.style.display = 'none';
+      hint.style.display   = 'inline-flex';
+      done.style.display   = 'inline-flex';
+      // Make all co-editable elements actually editable
+      section.querySelectorAll('.co-editable').forEach(el => {
+        el.contentEditable = 'true';
+        el.spellcheck = false;
+        el.addEventListener('keydown', coKeydown);
+        el.addEventListener('blur', coSave);
+      });
+    } else {
+      toggle.style.display = '';
+      hint.style.display   = 'none';
+      done.style.display   = 'none';
+      // Remove editing from co-editable elements
+      section.querySelectorAll('.co-editable').forEach(el => {
+        el.contentEditable = 'false';
+        el.removeEventListener('keydown', coKeydown);
+        el.removeEventListener('blur', coSave);
+        el.blur();
+      });
+    }
+  }
+
+  function coKeydown(e) {
+    // Shift+Enter for multi-line; plain Enter = confirm & exit
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      this.blur();
+    }
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      this.blur();
+    }
+  }
+
+  function coSave() {
+    const key = this.dataset.editKey;
+    if (!key) return;
+    try {
+      localStorage.setItem(CO_TEXT_PREFIX + key, this.innerHTML);
+    } catch (err) { console.warn('co-save error', err); }
+  }
+
+  // ページロード時：保存済みの会社情報テキストを復元
+  document.querySelectorAll('.co-editable[data-edit-key]').forEach(el => {
+    const key = el.dataset.editKey;
+    try {
+      const saved = localStorage.getItem(CO_TEXT_PREFIX + key);
+      if (saved !== null) el.innerHTML = saved;
+    } catch (err) {}
+  });
+
+  /* ===================================================
+     EC SHOP — 商品カタログ（STORES BUTTON埋め込み方式）
+     ---------------------------------------------------
+     ★ 使い方 ★
+     1) STORES管理画面 → 各商品ページ → 「STORES BUTTON」で
+        埋め込みコード（<script>タグ）を発行してください。
+     2) 下の PRODUCTS 配列、該当商品の storesButtonCode に
+        発行されたコードをそのまま貼り付けてください。
+     3) 空欄のままだと「準備中」の点線プレースホルダーが
+        表示されるので、公開前の作業チェックにも使えます。
+     =================================================== */
+
+  // ──────────────────────────
+  //  商品データ
+  // ──────────────────────────
+  const PRODUCTS = [
+    {id:'g1', cat:'gelato', name:'お試しジェラートセット',    sub:'4個入り', price:2800,
+     img:'images/flavors/strawberry.jpg', badge:'初回おすすめ', cold:true,
+     desc:'久住高原のしぼりたてミルクで作った人気4種。まず試してみたい方に。',
+     storesButtonCode:''},
+    {id:'g2', cat:'gelato', name:'人気フレーバー詰め合わせ',  sub:'6個入り', price:4000,
+     img:'images/flavors/mixedberry.jpg', badge:'人気No.1', cold:true,
+     desc:'売れ筋6フレーバーをまとめて。ご家族やご友人へのプレゼントにも最適です。',
+     storesButtonCode:`<div class="storesjp-button" data-storesjp-item="611de8b246e30e1f78df02cf" data-storesjp-variation="62e811935ff42364ebc76bcc" data-storesjp-name="ooitagelato" data-storesjp-layout="layout_a" data-storesjp-lang="ja" data-storesjp-image="7b8b7c493a97e589754f_340x204.jpeg"></div><script>(function(d,s,id){var st=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}var nst=d.createElement(s);nst.id=id;nst.src="//btn.stores.jp/button.js";nst.charset="UTF-8";st.parentNode.insertBefore(nst,st);})(document, "script", "storesjp-button");<\/script>`},
+    {id:'g3', cat:'gelato', name:'くじゅう高原ミルクセット',  sub:'6個入り', price:3800,
+     img:'images/flavors/milk.jpg', badge:'', cold:true,
+     desc:'無添加・無着色、搾りたて生乳100%のミルク系フレーバー中心のセット。',
+     storesButtonCode:''},
+    {id:'g4', cat:'gelato', name:'全フレーバー贅沢セット',    sub:'12個入り', price:7800,
+     img:'images/flavors/blueberry.jpg', badge:'大容量ギフト', cold:true,
+     desc:'12種類のフレーバーをお届け。¥10,000以上のご注文で送料無料になります。',
+     storesButtonCode:''},
+    {id:'g5', cat:'gelato', name:'ギフトボックス',            sub:'6個入り', price:4500,
+     img:'images/flavors/sakura.jpg', badge:'🎁 贈り物に', cold:true,
+     desc:'贈り物向けのギフト専用ボックス。大切な方へ大分の味をお届けします。',
+     storesButtonCode:''},
+    {id:'g6', cat:'gelato', name:'ギフトボックス（大）',      sub:'12個入り', price:8500,
+     img:'images/flavors/chestnut.jpg', badge:'🎁 特別ギフト', cold:true,
+     desc:'豪華な12個入りギフトボックス。¥10,000以上のご注文で送料無料になります。',
+     storesButtonCode:''},
+
+    {id:'m1', cat:'matcha', name:'金鱗茶屋 抹茶ジェラートセット', sub:'6個入り', price:4200,
+     img:'images/flavors/matcha.jpg', badge:'金鱗茶屋', cold:true,
+     desc:'湯布院金鱗茶屋こだわりの宇治抹茶ジェラート6個セット。深い香りと旨味。',
+     storesButtonCode:''},
+    {id:'m2', cat:'matcha', name:'金鱗茶屋 茶葉セレクション',     sub:'6個入り', price:4800,
+     img:'images/flavors/hojicha.jpg', badge:'茶葉づくし', cold:true,
+     desc:'抹茶・ほうじ茶・アールグレイなど茶葉系フレーバーを6種。お茶好きの方に。',
+     storesButtonCode:''},
+    {id:'m3', cat:'matcha', name:'金鱗茶屋ギフトセット',           sub:'選り抜き', price:5500,
+     img:'images/flavors/earlgrey.jpg', badge:'🎁 プレミアム', cold:true,
+     desc:'湯布院・金鱗茶屋の抹茶商品を厳選したプレミアムギフト。特別な贈り物に。',
+     storesButtonCode:''},
+
+    {id:'d1', cat:'goods', name:'SWEETS FARMトートバッグ', sub:'コットン100%', price:1500,
+     img:'images/sweets-farm-logo.png', badge:'オリジナル', cold:false,
+     desc:'ロゴ入りエコトートバッグ。お買い物・旅行のお供に。内ポケット付き。',
+     storesButtonCode:''},
+    {id:'d2', cat:'goods', name:'ジェラートカップ（陶器）', sub:'1個', price:2400,
+     img:'images/sweets-farm-logo.png', badge:'職人作', cold:false,
+     desc:'地元職人が作ったオリジナル陶器カップ。自宅でジェラートをおしゃれに。食洗機対応。',
+     storesButtonCode:''},
+    {id:'d3', cat:'goods', name:'くじゅう高原マグカップ',   sub:'1個', price:1800,
+     img:'images/sweets-farm-logo.png', badge:'', cold:false,
+     desc:'くじゅう高原の景色をプリント。電子レンジ対応、容量280ml。旅の思い出に。',
+     storesButtonCode:''},
+  ];
+
+  function fmt(n) { return '¥' + n.toLocaleString(); }
+
+  // ──────────────────────────
+  //  商品グリッド描画
+  // ──────────────────────────
+  function renderProducts(filterCat) {
+    const grid = document.getElementById('ecGrid');
+    if (!grid) return;
+    const filtered = filterCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === filterCat);
+    const catBadgeClass = { gelato:'', matcha:'matcha', goods:'goods' };
+
+    grid.innerHTML = filtered.map(p => `
+        <div class="ec-product-card">
+          <div class="ec-product-img-wrap">
+            <img src="${p.img}" alt="${p.name}" onerror="this.src='images/sweets-farm-logo.png'">
+            ${p.badge ? `<span class="ec-badge ${catBadgeClass[p.cat]}">${p.badge}</span>` : ''}
+            ${p.cold  ? `<span class="ec-cold-tag">🧊 冷凍便</span>` : ''}
+          </div>
+          <div class="ec-product-body">
+            <div class="ec-product-name">${p.name}</div>
+            <div class="ec-product-unit">${p.sub}</div>
+            <div class="ec-product-desc">${p.desc}</div>
+            <div class="ec-product-price">${fmt(p.price)}<span>（税込）</span></div>
+          </div>
+          <div class="ec-product-footer">
+            <div class="stores-btn-slot" data-product-id="${p.id}">
+              ${p.storesButtonCode && p.storesButtonCode.trim()
+                ? p.storesButtonCode
+                : `<div class="stores-btn-placeholder">🛒 STORES BUTTON 未設定<small>PRODUCTS 配列の storesButtonCode に<br>「${p.id}」のコードを貼り付けてください</small></div>`
+              }
+            </div>
+          </div>
+        </div>`
+    ).join('');
+
+    // STORES BUTTON のコードに含まれる <script> タグは innerHTML では実行されないため、
+    // 動的に再生成して実行する
+    grid.querySelectorAll('.stores-btn-slot script').forEach(oldScript => {
+      const newScript = document.createElement('script');
+      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+      newScript.textContent = oldScript.textContent;
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+  }
+
+  function filterEC(cat, btn) {
+    document.querySelectorAll('.ec-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts(cat);
+  }
+
+  // ──────────────────────────
+  //  初期化
+  // ──────────────────────────
+  (function initEC() {
+    renderProducts('all');
+  })();
+
+  /* ===================================================
+     管理ツールバー：HTML保存 / JSONデータ書き出し・読み込み
+     =================================================== */
+
+  const SF_STORE_KEY = 'sweetsfarm_site_backup';
+
+  // ── HTML全体をファイルとして保存（完成版ダウンロード）──
+  function sfDownloadHTML() {
+    const blob = new Blob(['<!DOCTYPE html>\n' + document.documentElement.outerHTML], {type:'text/html'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'sweetsfarm_homepage.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  // ── 編集データをJSONで書き出し ──
+  function sfExportJSON() {
+    const data = { texts:{}, images:{}, timestamp: new Date().toISOString() };
+
+    // テキスト（contenteditable / co-editable）
+    document.querySelectorAll('[data-edit-key]').forEach(el => {
+      data.texts[el.dataset.editKey] = el.innerHTML;
+    });
+
+    // 画像（img-drop-zone / drink-icon）
+    document.querySelectorAll('[data-key]').forEach(el => {
+      if (el.dataset.key && el.style.backgroundImage) {
+        data.images[el.dataset.key] = el.style.backgroundImage;
+      }
+    });
+
+    // EC カート商品データ
+    // カート機能は廃止（STORES BUTTON方式のため）
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'sweetsfarm_data_' + new Date().toISOString().slice(0,10) + '.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    sfShowNotice('✅ データを書き出しました');
+  }
+
+  // ── JSONデータを読み込んでサイトに反映 ──
+  function sfImportJSON() {
+    document.getElementById('sf-json-input').click();
+  }
+
+  document.getElementById('sf-json-input').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      try {
+        const data = JSON.parse(ev.target.result);
+
+        // テキスト復元
+        if (data.texts) {
+          for (const [key, val] of Object.entries(data.texts)) {
+            const el = document.querySelector(`[data-edit-key="${key}"]`);
+            if (el) {
+              el.innerHTML = val;
+              try { localStorage.setItem('sweetsfarm_text_' + key, val); } catch(e){}
+            }
+            // co-editable も対応
+            const co = document.querySelector(`.co-editable[data-edit-key="${key}"]`);
+            if (co) {
+              co.innerHTML = val;
+              try { localStorage.setItem('co_text_' + key, val); } catch(e){}
+            }
+          }
+        }
+
+        // 画像復元
+        if (data.images) {
+          for (const [key, val] of Object.entries(data.images)) {
+            const el = document.querySelector(`[data-key="${key}"]`);
+            if (el && val) {
+              el.style.backgroundImage = val;
+              el.classList.add('has-image');
+              try { localStorage.setItem('sweetsfarm_img_' + key, val.replace(/^url\(['"]?/,'').replace(/['"]?\)$/,'')); } catch(e){}
+            }
+          }
+        }
+
+        sfShowNotice('✅ データを読み込みました');
+        setTimeout(() => sfShowNotice(''), 3000);
+      } catch(err) {
+        alert('❌ 読み込みに失敗しました。正しいJSONファイルをお選びください。');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  });
+
+  function sfShowNotice(msg) {
+    if (!msg) return;
+    showToast(msg);
+  }
+
+</script>
+
+</body>
+</html>
