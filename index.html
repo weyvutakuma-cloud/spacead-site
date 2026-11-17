@@ -3498,7 +3498,7 @@
     <div class="contact-form fade-up">
       <h3>お問い合わせフォーム</h3>
       <p>通販のご注文・店舗へのご質問・ギフトのご相談など、下のフォームからお気軽にどうぞ。送信すると、ご入力のメールアドレスに<strong>受付完了の自動返信メール</strong>が届きます。</p>
-      <form id="contact-form" class="inq-form" action="https://formsubmit.co/sweetsfarm910@gmail.com" method="POST" novalidate>
+      <form id="contact-form" class="inq-form" action="https://formsubmit.co/20036a7e08c59aa9147a0329b8dcbe63" method="POST" novalidate>
         <div class="form-group">
           <label for="inq-name">お名前 <span class="req">必須</span></label>
           <input id="inq-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="例：大分 太郎">
@@ -4572,7 +4572,7 @@ window.addEventListener('scroll',f,{passive:true});f();})();
 (function(){
   var f=document.getElementById('contact-form'); if(!f) return;
   var btn=document.getElementById('inq-submit'), st=document.getElementById('inq-status');
-  var MAIL='sweetsfarm910@gmail.com';
+  var MAIL='sweetsfarm910@gmail.com', FS='20036a7e08c59aa9147a0329b8dcbe63';
   function say(cls,html){ st.className='inq-status '+cls; st.innerHTML=html; st.scrollIntoView({block:'nearest',behavior:'smooth'}); }
   if(/[?&]sent=1/.test(location.search)) say('ok','✅ <strong>送信が完了しました。</strong>ご入力のメールアドレスに自動返信メールをお送りしました。届かない場合は迷惑メールフォルダもご確認ください。');
   f.addEventListener('submit',function(e){
@@ -4587,16 +4587,17 @@ window.addEventListener('scroll',f,{passive:true});f();})();
     if(f.elements['_honey'].value) return;
     btn.disabled=true; btn.textContent='送信中…'; st.className='inq-status'; st.textContent='';
     var data={}; new FormData(f).forEach(function(v,k){ if(k!=='_next'&&k!=='_honey') data[k]=v; });
-    fetch('https://formsubmit.co/ajax/'+MAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-    .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ if(!r.ok||String(j.success)==='false') throw new Error(j.message||r.status); return j; }); })
+    fetch('https://formsubmit.co/ajax/'+FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ if(!r.ok||String(j.success)==='false'){ var er=new Error(j.message||('HTTP '+r.status)); er.detail=j.message||''; throw er; } return j; }); })
     .then(function(){
       f.reset(); btn.textContent='送信する';
       say('ok','✅ <strong>送信が完了しました。ありがとうございます。</strong><br>ご入力のメールアドレスに自動返信メールをお送りしました（届かない場合は迷惑メールフォルダもご確認ください）。追ってご連絡いたしますので、今しばらくお待ちください。');
     })
-    .catch(function(){
+    .catch(function(err){
       btn.textContent='送信する';
+      var why=(err&&err.detail)?('<br><small>（原因：'+String(err.detail).replace(/[<>&]/g,'')+'）</small>'):'';
       var body=encodeURIComponent('お名前：'+(data.name||'')+'\nご用件：'+(data['ご用件']||'')+'\nお問い合わせ内容：\n'+(data.message||''));
-      say('err','⚠ 送信できませんでした。お手数ですが、<a href="mailto:'+MAIL+'?subject='+encodeURIComponent('【お問い合わせ】')+'&body='+body+'">こちらからメールで送信</a>していただくか、時間をおいて再度お試しください。');
+      say('err','⚠ 送信できませんでした。お手数ですが、<a href="mailto:'+MAIL+'?subject='+encodeURIComponent('【お問い合わせ】')+'&body='+body+'">こちらからメールで送信</a>していただくか、時間をおいて再度お試しください。'+why);
     })
     .then(function(){ btn.disabled=false; });
   });
