@@ -245,6 +245,38 @@
 
   /* 古いnav-linksは非表示に */
   .nav-links { display: none !important; }
+  /* ===== モダンなヘッダー（ロゴ＋キャッチ＋ショップボタン） ===== */
+  nav#main-nav {
+    padding: 0.55rem 2.2rem;
+    background: rgba(255,251,246,0.78);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border-bottom: 1px solid rgba(255,176,133,0.28);
+    box-shadow: 0 6px 30px rgba(107,66,38,0.07);
+    min-height: 68px;
+  }
+  .nav-brand { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; min-width: 0; }
+  .nav-logo-img { height: 50px; width: auto; display: block; border-radius: 6px; transition: transform .25s; }
+  .nav-brand:hover .nav-logo-img { transform: scale(1.04); }
+  .nav-tag { display: flex; flex-direction: column; gap: 3px; padding-left: 0.9rem; border-left: 1px solid rgba(107,66,38,0.22); line-height: 1.2; }
+  .nav-tag b { font-size: 0.86rem; font-weight: 700; color: var(--brown); letter-spacing: 0.06em; white-space: nowrap; }
+  .nav-tag i { font-style: normal; font-size: 0.58rem; letter-spacing: 0.28em; color: var(--coral); font-weight: 700; white-space: nowrap; }
+  .nav-actions { display: flex; align-items: center; gap: 1.1rem; flex-shrink: 0; }
+  .nav-shop { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.2rem; border-radius: 50px; background: linear-gradient(135deg, var(--coral), var(--peach)); color: #fff; text-decoration: none; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; box-shadow: 0 4px 14px rgba(255,122,92,0.32); transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+  .nav-shop:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,122,92,0.42); }
+  .nav-drawer { top: 68px; }
+  @media (max-width: 700px) {
+    nav#main-nav { padding: 0.5rem 1rem; min-height: 60px; }
+    .nav-logo-img { height: 42px; }
+    .nav-tag { padding-left: 0.65rem; }
+    .nav-tag b { font-size: 0.7rem; letter-spacing: 0.03em; }
+    .nav-tag i { display: none; }
+    .nav-shop span { display: none; }
+    .nav-shop { padding: 0.5rem 0.75rem; }
+    .nav-drawer { top: 60px; }
+  }
+  @media (max-width: 380px) { .nav-tag { display: none; } }
+
 
   /* ===== セクションアンカーリンク ===== */
   .section-anchor {
@@ -1378,7 +1410,7 @@
   /* ===== トップのカード：会社ページへのリンク（花のメッセージカード） ===== */
   .hero-photo-frame { width: 214px; padding: 12px 12px 14px; background: #FFFDF8; border: 1px solid rgba(255,176,133,0.55); border-radius: 10px; box-shadow: 0 14px 38px rgba(0,0,0,0.32), 0 0 0 5px rgba(255,255,255,0.55); }
   .hero-photo-frame .hero-photo-inner { height: 150px; border-radius: 6px; }
-  .hero-photo-frame .hero-photo-inner.has-image { background-size: cover; background-position: center 58%; background-repeat: no-repeat; }
+  .hero-photo-frame .hero-photo-inner.has-image { background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #fff; }
   .hero-photo-frame .hero-photo-caption { margin-top: 6px; font-size: 0.9rem; }
   .hero-card-msg { margin-top: 6px; text-align: center; line-height: 1.5; }
   .hero-card-msg .hc-script { display: block; font-family: 'Dancing Script', cursive; font-size: 1.05rem; color: #C2577A; }
@@ -2670,10 +2702,16 @@
 
 <!-- NAVIGATION -->
 <nav id="main-nav">
-  <a class="nav-logo" href="#hero"><img src="images/sweets-farm-logo.webp" alt="Kuju Kogen Sweets Farm"></a>
-  <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="メニュー">
-    <span></span><span></span><span></span>
-  </button>
+  <a class="nav-brand" href="#hero" aria-label="SWEETS FARM トップへ">
+    <img class="nav-logo-img" src="images/sweets-farm-logo.webp" alt="Kuju Kogen Sweets Farm" width="92" height="49" onerror="this.onerror=null;this.src='images/sweets-farm-logo-small.png'">
+    <span class="nav-tag"><b>くじゅう高原のジェラート</b><i>KUJU KOGEN · OITA</i></span>
+  </a>
+  <div class="nav-actions">
+    <a class="nav-shop" href="https://ooitagelato.stores.jp/" target="_blank" rel="noopener">🛒 <span>オンラインショップ</span></a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- ドロップダウンメニュー -->
@@ -2776,7 +2814,7 @@
 
   <!-- Drop zone: real shop photo (polaroid) -->
   <div class="hero-photo-frame">
-    <div class="hero-photo-inner img-drop-zone" data-key="hero-photo" data-default="images/sweets-farm-storefront-portrait.webp">
+    <div class="hero-photo-inner img-drop-zone" data-key="hero-photo" data-default="images/sweets-farm-logo.webp">
       <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
       <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の実写真を<br>ドロップ or クリック</div>
       <button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button>
