@@ -4675,6 +4675,42 @@ function f(){var h=document.getElementById('hero');var t=h?h.offsetHeight*0.6:30
 window.addEventListener('scroll',f,{passive:true});f();})();
 </script>
 <script>
+/* 編集モード専用（?edit=1 のときだけ動きます）：トップ背景の差し替えと、差し替え画像の書き出し */
+(function(){
+  if(!/[?&]edit=1/.test(location.search)) return;
+  var KEY='sweetsfarm_img_hero-bg', bg=document.querySelector('.hero-photo-bg'), hero=document.getElementById('hero');
+  function apply(u){ if(bg){ bg.style.setProperty('background-image',"url('"+u+"')",'important'); } }
+  try{ var saved=localStorage.getItem(KEY); if(saved) apply(saved); }catch(e){}
+  function take(file){
+    if(!file||!file.type||file.type.indexOf('image/')!==0){ alert('画像ファイル（JPG・PNG・WEBP）をお使いください。'); return; }
+    var r=new FileReader(); r.onload=function(ev){ var u=ev.target.result; apply(u); try{localStorage.setItem(KEY,u);}catch(e){ alert('画像が大きすぎて、ブラウザに保存できませんでした。見た目の確認はできます。'); } }; r.readAsDataURL(file);
+  }
+  if(hero){
+    ['dragover','dragenter'].forEach(function(ev){hero.addEventListener(ev,function(e){ if(e.target.closest('.img-drop-zone')) return; e.preventDefault(); hero.style.outline='4px dashed #FF7A5C'; hero.style.outlineOffset='-8px'; });});
+    hero.addEventListener('dragleave',function(){hero.style.outline='';});
+    hero.addEventListener('drop',function(e){ hero.style.outline=''; if(e.target.closest('.img-drop-zone')) return; e.preventDefault(); take(e.dataTransfer&&e.dataTransfer.files[0]); });
+  }
+  var p=document.createElement('div'); p.id='sf-editpanel';
+  p.style.cssText='position:fixed;left:14px;bottom:14px;z-index:2000;background:#fff;border:2px solid #FF7A5C;border-radius:14px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.25);font:600 12.5px/1.6 "Zen Kaku Gothic New",sans-serif;color:#3A2A1E;max-width:260px';
+  p.innerHTML='<div style="font-weight:700;margin-bottom:6px">🛠 編集モード</div>'+
+   '<div style="font-weight:400;margin-bottom:8px">写真の枠に、画像を<b>ドラッグ&ドロップ</b>すると、はめた様子を確認できます。トップの背景は、画面の上の部分に、ドロップしてください。</div>'+
+   '<button type="button" id="sf-pick" style="display:block;width:100%;margin-bottom:6px;padding:8px;border:0;border-radius:8px;background:#7DAE6A;color:#fff;font-weight:700;cursor:pointer">🏔 トップ背景を選ぶ</button>'+
+   '<button type="button" id="sf-export" style="display:block;width:100%;padding:8px;border:0;border-radius:8px;background:#FF7A5C;color:#fff;font-weight:700;cursor:pointer">📤 確認した画像を書き出す</button>'+
+   '<div style="font-weight:400;margin-top:8px;font-size:11.5px;color:#7A5A40">この確認は、お使いのブラウザだけの表示です。書き出したファイルを、Claude に送ると、公開用に、はめ込みます。</div>';
+  document.body.appendChild(p);
+  var inp=document.createElement('input'); inp.type='file'; inp.accept='image/*'; inp.style.display='none'; document.body.appendChild(inp);
+  inp.addEventListener('change',function(){ take(inp.files[0]); inp.value=''; });
+  document.getElementById('sf-pick').onclick=function(){ inp.click(); };
+  document.getElementById('sf-export').onclick=function(){
+    var out={}, n=0;
+    try{ for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(k.indexOf('sweetsfarm_img_')===0){ out[k.replace('sweetsfarm_img_','')]=localStorage.getItem(k); n++; } } }catch(e){}
+    if(!n){ alert('差し替えた画像が、まだありません。'); return; }
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(out)],{type:'application/json'})); a.download='sweetsfarm-images.json'; document.body.appendChild(a); a.click(); a.remove();
+    alert(n+'枚の画像を書き出しました（sweetsfarm-images.json）。このファイルを、Claude に送ってください。');
+  };
+})();
+</script>
+<script>
 /* 公開用表示：編集用の表示・操作を隠します。編集したいときは、アドレスの最後に ?edit=1 を付けて開いてください */
 (function(){
   if (/[?&]edit=1/.test(location.search)) return;
