@@ -2737,6 +2737,7 @@
   .img-drop-zone[data-key="flavor-veganoats"].has-image { background-size: 50% auto !important; background-position: 50% 50% !important; background-repeat: no-repeat !important; }
   .img-drop-zone[data-key="drink-lattejelly"].has-image { background-size: 80% auto !important; background-position: 50% 50% !important; background-repeat: no-repeat !important; }
   .img-drop-zone[data-key="flavor-earlgrey"].has-image { background-size: 54% auto !important; background-position: 50% 61% !important; background-repeat: no-repeat !important; }
+  .img-drop-zone[data-key="store-matcha"].has-image { background-size: 91% auto !important; background-position: 40% 17% !important; background-repeat: no-repeat !important; }
 </style>
 </head>
 <body>
@@ -2936,7 +2937,7 @@
 
     <!-- 金鱗茶屋 -->
     <div class="store-card fade-up">
-      <div class="store-header matcha img-drop-zone" data-key="store-matcha">
+      <div class="store-header matcha img-drop-zone" data-key="store-matcha" data-default="images/kinrin-storefront.webp">
         <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
         <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の写真をドロップ<br>または クリックして変更</div>
         <button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button>
