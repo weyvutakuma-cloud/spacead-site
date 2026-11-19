@@ -245,6 +245,44 @@
 
   /* 古いnav-linksは非表示に */
   .nav-links { display: none !important; }
+  /* トップ右のカード → お問い合わせへのページ内リンク */
+  .hero-card-link { position: absolute; inset: 0; z-index: 30; border-radius: 10px; }
+  .hero-card-link:focus-visible { outline: 3px solid #F28BA8; outline-offset: 4px; }
+  .hero-card-msg .hc-go { font-size: 0.66rem; padding: 0.22rem 0.8rem; margin-top: 4px; letter-spacing: 0.04em; }
+  section[id] { scroll-margin-top: 76px; }
+
+  /* ===== お知らせ（トップ直下） ===== */
+  .news-section { background: var(--cream); padding: 3.2rem 2rem 3.6rem; }
+  .news-section .section-header { margin-bottom: 1.6rem; }
+  .news-filters { max-width: 900px; margin: 0 auto 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .news-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+  .news-chips .lbl { font-size: 0.72rem; font-weight: 700; color: var(--text-mid); margin-right: 0.3rem; min-width: 3.2em; }
+  .news-chip { border: 1.5px solid rgba(255,176,133,0.55); background: #fff; color: var(--text-mid); border-radius: 50px; padding: 0.28rem 0.85rem; font: 700 0.76rem 'Zen Kaku Gothic New', sans-serif; cursor: pointer; transition: all .15s; }
+  .news-chip:hover { border-color: var(--coral); color: var(--coral); }
+  .news-chip.on { background: linear-gradient(135deg, var(--coral), var(--peach)); color: #fff; border-color: transparent; }
+  .news-section .news-list { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 18px; box-shadow: 0 6px 26px var(--shadow); padding: 0.4rem 1.4rem; }
+  .news-row { border-bottom: 1px solid rgba(107,66,38,0.1); }
+  .news-row:last-child { border-bottom: none; }
+  .news-row > summary, .news-row > .news-head { list-style: none; display: grid; grid-template-columns: 6.6rem 6.4rem 1fr auto; gap: 1rem; align-items: center; padding: 1rem 0; cursor: pointer; }
+  .news-row > summary::-webkit-details-marker { display: none; }
+  .news-row .news-title { font-size: 0.93rem; color: var(--text-dark); font-weight: 700; line-height: 1.6; }
+  .news-row .caret { color: var(--coral); font-size: 0.8rem; transition: transform .2s; }
+  .news-row[open] .caret { transform: rotate(90deg); }
+  .news-row .news-body { padding: 0 0 1.2rem 7.6rem; font-size: 0.88rem; line-height: 1.9; color: var(--text-mid); }
+  .news-row .news-body a { color: var(--coral); font-weight: 700; }
+  .news-cat.shop { background: rgba(66,133,244,0.12); color: #3367c9; }
+  .news-cat.item { background: rgba(212,168,67,0.18); color: #9a7414; }
+  .news-more { display: block; margin: 1.1rem auto 0; padding: 0.6rem 1.6rem; border-radius: 50px; border: 2px solid var(--peach); background: #fff; color: var(--brown); font: 700 0.85rem 'Zen Kaku Gothic New', sans-serif; cursor: pointer; }
+  .news-more:hover { background: var(--soft-peach); }
+  .news-more[hidden], .news-filters[hidden] { display: none !important; }
+  .news-empty { text-align: center; color: var(--text-mid); padding: 1.6rem 0; font-size: 0.9rem; }
+  @media (max-width: 700px) {
+    .news-section { padding: 2.4rem 1rem 2.8rem; }
+    .news-row > summary, .news-row > .news-head { grid-template-columns: auto 1fr auto; grid-template-areas: "d c x" "t t t"; gap: 0.3rem 0.7rem; padding: 0.9rem 0; }
+    .news-row .news-date { grid-area: d; } .news-row .news-cat { grid-area: c; justify-self: start; } .news-row .caret { grid-area: x; } .news-row .news-title { grid-area: t; }
+    .news-row .news-body { padding-left: 0; }
+  }
+
   /* ===== トップ背景：動かない静止画（hero.webp を差し替えるだけで変更できます） ===== */
   .hero-photo-bg { inset: 0 !important; animation: none !important; transform: none !important; will-change: auto; }
   .hero .cloud, .hero .birds, .hero .petal { display: none !important; }
@@ -2863,10 +2901,27 @@
       <div class="hero-photo-placeholder"><span class="icon">🏔️🍦</span>実際の店舗写真</div>
     </div>
     <p class="hero-photo-caption editable-text" contenteditable="true" spellcheck="false" data-edit-key="hero-photo-caption">SWEETS FARM</p>
-    <div class="hero-card-msg"><span class="hc-script">With flowers from Kuju</span></div>
+    <div class="hero-card-msg"><span class="hc-script">With flowers from Kuju</span><span class="hc-go">お問い合わせへ →</span></div>
+    <a class="hero-card-link" href="#contact" aria-label="お問い合わせフォームへ移動"></a>
     <svg class="hc-fl hc-fl-a" viewBox="0 0 130 110" aria-hidden="true"><path d="M8 92 C30 70 50 60 78 40" stroke="#7DAE6A" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="38" cy="70" rx="14" ry="6" transform="rotate(-35 38 70)" fill="#A9CC93"/><ellipse cx="62" cy="52" rx="13" ry="5.5" transform="rotate(-40 62 52)" fill="#8FBF7A"/><ellipse cx="30" cy="21" rx="9.4" ry="16.1" transform="rotate(0 30 38)" fill="#FFC9D6"/><ellipse cx="30" cy="21" rx="9.4" ry="16.1" transform="rotate(72 30 38)" fill="#FFC9D6"/><ellipse cx="30" cy="21" rx="9.4" ry="16.1" transform="rotate(144 30 38)" fill="#FFC9D6"/><ellipse cx="30" cy="21" rx="9.4" ry="16.1" transform="rotate(216 30 38)" fill="#FFC9D6"/><ellipse cx="30" cy="21" rx="9.4" ry="16.1" transform="rotate(288 30 38)" fill="#FFC9D6"/><circle cx="30" cy="38" r="5.2" fill="#FFD966"/><ellipse cx="78" cy="15" rx="7.2" ry="12.4" transform="rotate(0 78 28)" fill="#E6D6FF"/><ellipse cx="78" cy="15" rx="7.2" ry="12.4" transform="rotate(72 78 28)" fill="#E6D6FF"/><ellipse cx="78" cy="15" rx="7.2" ry="12.4" transform="rotate(144 78 28)" fill="#E6D6FF"/><ellipse cx="78" cy="15" rx="7.2" ry="12.4" transform="rotate(216 78 28)" fill="#E6D6FF"/><ellipse cx="78" cy="15" rx="7.2" ry="12.4" transform="rotate(288 78 28)" fill="#E6D6FF"/><circle cx="78" cy="28" r="4.0" fill="#FFD966"/><ellipse cx="100" cy="56" rx="5.4" ry="9.3" transform="rotate(0 100 66)" fill="#FFE1A8"/><ellipse cx="100" cy="56" rx="5.4" ry="9.3" transform="rotate(72 100 66)" fill="#FFE1A8"/><ellipse cx="100" cy="56" rx="5.4" ry="9.3" transform="rotate(144 100 66)" fill="#FFE1A8"/><ellipse cx="100" cy="56" rx="5.4" ry="9.3" transform="rotate(216 100 66)" fill="#FFE1A8"/><ellipse cx="100" cy="56" rx="5.4" ry="9.3" transform="rotate(288 100 66)" fill="#FFE1A8"/><circle cx="100" cy="66" r="3.0" fill="#F29A76"/></svg><svg class="hc-fl hc-fl-b" viewBox="0 0 130 110" aria-hidden="true"><path d="M122 18 C100 40 82 50 52 70" stroke="#7DAE6A" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="92" cy="42" rx="14" ry="6" transform="rotate(-35 92 42)" fill="#A9CC93"/><ellipse cx="68" cy="60" rx="13" ry="5.5" transform="rotate(-40 68 60)" fill="#8FBF7A"/><ellipse cx="98" cy="63" rx="8.6" ry="14.9" transform="rotate(0 98 78)" fill="#FFD0DB"/><ellipse cx="98" cy="63" rx="8.6" ry="14.9" transform="rotate(72 98 78)" fill="#FFD0DB"/><ellipse cx="98" cy="63" rx="8.6" ry="14.9" transform="rotate(144 98 78)" fill="#FFD0DB"/><ellipse cx="98" cy="63" rx="8.6" ry="14.9" transform="rotate(216 98 78)" fill="#FFD0DB"/><ellipse cx="98" cy="63" rx="8.6" ry="14.9" transform="rotate(288 98 78)" fill="#FFD0DB"/><circle cx="98" cy="78" r="4.8" fill="#FFD966"/><ellipse cx="48" cy="75" rx="6.1" ry="10.5" transform="rotate(0 48 86)" fill="#D9C8FF"/><ellipse cx="48" cy="75" rx="6.1" ry="10.5" transform="rotate(72 48 86)" fill="#D9C8FF"/><ellipse cx="48" cy="75" rx="6.1" ry="10.5" transform="rotate(144 48 86)" fill="#D9C8FF"/><ellipse cx="48" cy="75" rx="6.1" ry="10.5" transform="rotate(216 48 86)" fill="#D9C8FF"/><ellipse cx="48" cy="75" rx="6.1" ry="10.5" transform="rotate(288 48 86)" fill="#D9C8FF"/><circle cx="48" cy="86" r="3.4" fill="#FFD966"/></svg>
   </div>
 
+</section>
+
+<!-- NEWS（お知らせ）：内容は news.json を編集して更新します -->
+<section class="news-section" id="news">
+  <div class="news-inner">
+    <div class="section-header fade-up">
+      <span class="section-label">News</span>
+      <h2 class="section-title"><a href="#news" class="section-anchor">お知らせ</a></h2>
+    </div>
+    <div class="news-filters" id="news-filters" hidden>
+      <div class="news-chips" id="news-cats"></div>
+      <div class="news-chips" id="news-years"></div>
+    </div>
+    <div class="news-list" id="news-list"><p class="news-empty">読み込み中です…</p></div>
+    <button type="button" class="news-more" id="news-more" hidden>過去のお知らせをもっと見る ▾</button>
+  </div>
 </section>
 
 <!-- STORES -->
@@ -3565,42 +3620,6 @@
   </div>
 </section>
 
-<!-- NEWS -->
-<section class="news-section" id="news">
-  <div class="news-inner">
-    <div class="section-header fade-up">
-      <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-4">News</span>
-      <h2 class="section-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-title-3"><a href="#news" class="section-anchor">お知らせ</a></h2>
-    </div>
-    <div class="news-list fade-up">
-      <div class="news-item">
-        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-1">2026.03.01</span>
-        <span class="news-cat farm editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-1">SWEETS FARM</span>
-        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-1">春の新フレーバー「さくら」「贅沢いちご」販売開始</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-2">2026.02.15</span>
-        <span class="news-cat matcha editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-2">金鱗茶屋</span>
-        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-2">バレンタイン限定「ショコラ抹茶」好評販売中</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-3">2026.02.01</span>
-        <span class="news-cat all editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-3">通販</span>
-        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-3">オンラインショップ全国発送対応スタートのお知らせ</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-4">2025.12.10</span>
-        <span class="news-cat farm editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-4">SWEETS FARM</span>
-        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-4">くじゅう花公園内店舗 冬季休業のお知らせ（工場は通常稼働）</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-date-5">2025.11.28</span>
-        <span class="news-cat all editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-cat-5">お知らせ</span>
-        <span class="news-title editable-text" contenteditable="true" spellcheck="false" data-edit-key="news-title-5">年末年始ギフトセット受付開始のご案内</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT & MAP -->
 <!-- FAQ -->
@@ -4845,5 +4864,46 @@ window.addEventListener('scroll',f,{passive:true});f();})();
   f.addEventListener('input',function(e){ e.target.classList&&e.target.classList.remove('invalid'); });
 })();
 </script>
+<script>
+/* お知らせ：news.json を読み込んで表示します（読み込めない時は、下のデータを表示）。
+   更新方法 → GitHub の news.json を開き、鉛筆のマークで編集し、先頭に1件、足します。 */
+(function(){
+  var FALLBACK=[{"date": "2026-11-19", "cat": "お知らせ", "title": "ホームページをリニューアルしました", "body": "SWEETS FARM シャーロットと、金鱗茶屋の最新情報を、お届けしていきます。お問い合わせは、ページ下部の、お問い合わせフォームから、お願いいたします。"}, {"date": "2026-11-19", "cat": "SWEETS FARM", "title": "くじゅう花公園内シャーロットは、12月から3月末まで冬季休業です", "body": "くじゅう花公園内の SWEETS FARM シャーロットは、12月から3月末まで、冬季休業となります。通販は、冬季も、ご利用いただけます。"}, {"date": "2026-11-17", "cat": "お知らせ", "title": "お問い合わせフォームを設置しました", "body": "ご質問・ご相談は、フォームから、お送りください。確認のメールが、自動で、届きます。"}];
+  var CATS={'お知らせ':'all','SWEETS FARM':'farm','金鱗茶屋':'matcha','通販':'shop','新商品':'item','営業日':'all'};
+  var list=document.getElementById('news-list'), more=document.getElementById('news-more'), box=document.getElementById('news-filters'),
+      catsEl=document.getElementById('news-cats'), yearsEl=document.getElementById('news-years');
+  var items=[], st={cat:'',year:'',all:false}, LIMIT=5;
+  function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function fmt(d){ return String(d).replace(/-/g,'.'); }
+  function chips(el,label,vals,key){
+    el.innerHTML='<span class="lbl">'+label+'</span>';
+    [''].concat(vals).forEach(function(v){
+      var b=document.createElement('button'); b.type='button'; b.className='news-chip'+(st[key]===v?' on':''); b.textContent=v||'すべて';
+      b.onclick=function(){ st[key]=v; st.all=false; render(); }; el.appendChild(b);
+    });
+  }
+  function render(){
+    var cats=[],years=[]; items.forEach(function(n){ if(cats.indexOf(n.cat)<0) cats.push(n.cat); var y=String(n.date).slice(0,4); if(years.indexOf(y)<0) years.push(y); });
+    years.sort().reverse();
+    box.hidden=(cats.length<2&&years.length<2);
+    chips(catsEl,'カテゴリ',cats,'cat'); chips(yearsEl,'過去の年',years,'year');
+    var f=items.filter(function(n){ return (!st.cat||n.cat===st.cat)&&(!st.year||String(n.date).slice(0,4)===st.year); });
+    var shown=(st.all||st.cat||st.year)?f:f.slice(0,LIMIT);
+    if(!f.length){ list.innerHTML='<p class="news-empty">該当するお知らせは、ありません。</p>'; more.hidden=true; return; }
+    list.innerHTML=shown.map(function(n){
+      var cls=CATS[n.cat]||'all', head='<span class="news-date">'+esc(fmt(n.date))+'</span><span class="news-cat '+cls+'">'+esc(n.cat)+'</span><span class="news-title">'+esc(n.title)+'</span>';
+      var link=n.url?'<p><a href="'+esc(n.url)+'">詳しくはこちら →</a></p>':'';
+      if(n.body||n.url) return '<details class="news-row"><summary>'+head+'<span class="caret">▶</span></summary><div class="news-body">'+esc(n.body||'').replace(/\n/g,'<br>')+link+'</div></details>';
+      return '<div class="news-row"><div class="news-head" style="cursor:default">'+head+'<span></span></div></div>';
+    }).join('');
+    more.hidden=!(f.length>LIMIT&&!st.all&&!st.cat&&!st.year);
+  }
+  more.onclick=function(){ st.all=true; render(); };
+  function load(data){ items=(data||[]).slice().sort(function(a,b){ return String(b.date).localeCompare(String(a.date)); }); render(); }
+  load(FALLBACK);
+  if(window.fetch){ fetch('news.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){ if(d&&d.length) load(d); }).catch(function(){}); }
+})();
+</script>
+<script>(function(){ if(/[?&]edit=1/.test(location.search)){ var a=document.querySelector(".hero-card-link"); if(a) a.remove(); } })();</script>
 </body>
 </html>
