@@ -330,6 +330,13 @@
   .nav-tag i { font-style: normal; font-size: 0.58rem; letter-spacing: 0.28em; color: var(--coral); font-weight: 700; white-space: nowrap; }
   .nav-actions { display: flex; align-items: center; gap: 1.1rem; flex-shrink: 0; }
   .nav-shop { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.2rem; border-radius: 50px; background: linear-gradient(135deg, var(--coral), var(--peach)); color: #fff; text-decoration: none; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; box-shadow: 0 4px 14px rgba(255,122,92,0.32); transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+
+  .nav-recruit { display:inline-flex; align-items:center; gap:0.3rem; padding:0.28rem 0.75rem; border-radius:50px; border:1.5px solid var(--coral); color:var(--coral); background:#fff; font-size:0.7rem; font-weight:700; text-decoration:none; white-space:nowrap; letter-spacing:0.03em; }
+  .nav-recruit::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--coral); }
+  .nav-recruit:hover { background:var(--coral); color:#fff; }
+  @media (max-width: 480px) { .nav-tag { display:none; } }
+  .nav-recruit[hidden] { display:none !important; }
+  @media (max-width: 700px) { .nav-actions { gap:0.5rem; } .nav-recruit { font-size:0.62rem; padding:0.24rem 0.55rem; } }
   .nav-shop:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,122,92,0.42); }
   .nav-drawer { top: 68px; }
   @media (max-width: 700px) {
@@ -2812,6 +2819,7 @@
     <span class="nav-tag"><b>くじゅう高原のジェラート</b><i>KUJU KOGEN · OITA</i></span>
   </a>
   <div class="nav-actions">
+    <a class="nav-recruit" id="nav-recruit-top" href="#recruit" hidden>スタッフ募集中</a>
     <a class="nav-shop" href="https://ooitagelato.stores.jp/" target="_blank" rel="noopener">🛒 <span>オンラインショップ</span></a>
     <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="メニュー">
       <span></span><span></span><span></span>
@@ -4950,7 +4958,7 @@ window.addEventListener('scroll',f,{passive:true});f();})();
   function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
   function draw(data){
     var items=((data&&data.items)||[]).filter(function(i){ return i.open!==false; });
-    sec.hidden=!items.length; if(nav) nav.hidden=!items.length;
+    sec.hidden=!items.length; if(nav) nav.hidden=!items.length; var top=document.getElementById('nav-recruit-top'); if(top) top.hidden=!items.length;
     grid.innerHTML=items.map(function(i){
       var perks=(i.perks||[]).map(function(p){return '<span>'+esc(p)+'</span>';}).join('');
       var shifts=(i.shifts||[]).map(function(s){ return '<div class="rc-shift"><b>'+esc(s.label)+'</b><div>'+esc(s.time)+(s.note?'<small>'+esc(s.note)+'</small>':'')+'</div></div>'; }).join('');
