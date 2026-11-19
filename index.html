@@ -634,6 +634,10 @@
     text-shadow: 0 1px 4px rgba(0,0,0,0.3);
   }
 
+  a.badge { cursor:pointer; transition:background .2s, transform .2s; }
+  a.badge:hover { background:rgba(255,255,255,0.3); transform:translateY(-2px); }
+  .store-card[id] { scroll-margin-top: 90px; }
+
   .hero-cta {
     display: flex;
     gap: 1rem;
@@ -2919,8 +2923,8 @@
       大自然が育んだ恵みを、まるごとジェラートに。
     </p>
     <div class="hero-badges">
-      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-1">🌸 くじゅう花公園</span>
-      <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-2">🍵 湯布院 金鱗茶屋</span>
+      <a class="badge on-dark" href="#store-charlotte" style="text-decoration:none">🌸 シャーロット</a>
+      <a class="badge on-dark" href="#store-kinrin" style="text-decoration:none">🍵 金鱗茶屋</a>
       <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-3">📦 全国通販対応</span>
       <span class="badge editable-text on-dark" contenteditable="true" spellcheck="false" data-edit-key="hero-badge-4">🥛 無添加・無着色</span>
     </div>
@@ -2980,7 +2984,7 @@
 
   <div class="stores-grid">
     <!-- SWEETS FARM -->
-    <div class="store-card fade-up">
+    <div class="store-card fade-up" id="store-charlotte">
       <div class="store-header farm img-drop-zone" data-key="store-farm" data-default="images/sweets-farm-storefront-wide.webp">
         <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
         <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の写真をドロップ<br>または クリックして変更</div>
@@ -3034,7 +3038,7 @@
     </div>
 
     <!-- 金鱗茶屋 -->
-    <div class="store-card fade-up">
+    <div class="store-card fade-up" id="store-kinrin">
       <div class="store-header matcha img-drop-zone" data-key="store-matcha" data-default="kinrin-photo.webp">
         <input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))">
         <div class="drop-hint"><span class="drop-hint-icon">📷</span>店舗の写真をドロップ<br>または クリックして変更</div>
