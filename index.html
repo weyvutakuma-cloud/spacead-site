@@ -245,6 +245,31 @@
 
   /* 古いnav-linksは非表示に */
   .nav-links { display: none !important; }
+  /* ===== スタッフ募集 ===== */
+  .recruit-section { background: linear-gradient(180deg, var(--cream) 0%, #fff6ee 100%); padding: 4rem 2rem 4.2rem; }
+  .recruit-section[hidden], #nav-recruit[hidden] { display: none !important; }
+  .recruit-grid { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; }
+  .rc-card { background: #fff; border-radius: 22px; box-shadow: 0 8px 32px var(--shadow); overflow: hidden; border-top: 6px solid var(--coral); }
+  .rc-card.matcha { border-top-color: var(--matcha); }
+  .rc-head { padding: 1.5rem 1.6rem 0.8rem; text-align: center; }
+  .rc-store { font-family: 'Playfair Display', 'Zen Kaku Gothic New', serif; font-size: 1.55rem; color: var(--text-dark); font-weight: 700; }
+  .rc-place { font-size: 0.78rem; color: var(--text-mid); margin-top: 0.2rem; }
+  .rc-wage { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--coral); font-weight: 700; margin-top: 0.7rem; line-height: 1.2; }
+  .rc-card.matcha .rc-wage { color: var(--matcha-dark); }
+  .rc-perks { display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; margin-top: 0.6rem; }
+  .rc-perks span { background: var(--soft-peach); color: var(--brown); border-radius: 50px; padding: 0.22rem 0.8rem; font-size: 0.78rem; font-weight: 700; }
+  .rc-card.matcha .rc-perks span { background: var(--soft-green); color: var(--matcha-dark); }
+  .rc-body { padding: 0.6rem 1.6rem 1.6rem; }
+  .rc-shift { display: grid; grid-template-columns: 5.6rem 1fr; gap: 0.6rem; padding: 0.7rem 0; border-top: 1px dashed rgba(107,66,38,0.2); font-size: 0.9rem; line-height: 1.6; }
+  .rc-shift b { color: var(--brown); font-size: 0.8rem; }
+  .rc-shift small { display: block; color: var(--text-mid); font-size: 0.78rem; }
+  .rc-terms { list-style: none; padding: 0.8rem 0 0; margin: 0; border-top: 1px dashed rgba(107,66,38,0.2); display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.84rem; color: var(--text-mid); }
+  .rc-terms li::before { content: '✓ '; color: var(--coral); font-weight: 700; }
+  .rc-cta { text-align: center; margin-top: 1.8rem; }
+  .rc-cta a { display: inline-block; padding: 0.85rem 2.2rem; border-radius: 50px; background: linear-gradient(135deg, var(--coral), var(--peach)); color: #fff; font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 20px rgba(255,122,92,0.35); }
+  .rc-note { text-align: center; font-size: 0.76rem; color: var(--text-mid); margin-top: 0.8rem; }
+  @media (max-width: 700px) { .recruit-section { padding: 3rem 1rem 3.2rem; } .rc-shift { grid-template-columns: 1fr; gap: 0.1rem; } }
+
   /* トップ右のカード → お問い合わせへのページ内リンク */
   .hero-card-link { position: absolute; inset: 0; z-index: 30; border-radius: 10px; }
   .hero-card-link:focus-visible { outline: 3px solid #F28BA8; outline-offset: 4px; }
@@ -2818,6 +2843,7 @@
       <ul>
         <li><a href="#about"     onclick="closeNav()"><span class="nav-icon">🌿</span>私たちのこだわり</a></li>
         <li><a href="#news"      onclick="closeNav()"><span class="nav-icon">📰</span>お知らせ</a></li>
+        <li id="nav-recruit" hidden><a href="#recruit" onclick="closeNav()"><span class="nav-icon">🧑‍🍳</span>スタッフ募集</a></li>
         <li><a href="#contact"   onclick="closeNav()"><span class="nav-icon">📍</span>お問い合わせ・アクセス</a></li>
       </ul>
     </div>
@@ -3631,6 +3657,20 @@
   <div class="faq-list fade-up"><details class="faq-item"><summary>SWEETS FARM シャーロットの営業時間と定休日は？</summary><p>9:00〜17:00で、4月〜11月は無休です。12月〜3月末は冬季休業です。くじゅう花公園内にあります。</p></details><details class="faq-item"><summary>金鱗茶屋 Sweets farm cafe の営業時間と定休日は？</summary><p>10:00〜16:00で、不定休です。湯布院・金鱗湖の近くにあります。</p></details><details class="faq-item"><summary>お店の場所を教えてください。</summary><p>SWEETS FARM シャーロットは大分県竹田市久住町大字久住4050のくじゅう花公園内、金鱗茶屋は大分県由布市湯布院町川上1551-11です。各店舗のGoogleマップのリンクから道案内できます。</p></details><details class="faq-item"><summary>ジェラートは通販で買えますか？</summary><p>はい。公式オンラインショップ（STORES）で、冷凍便にて全国へお届けしています。ギフトセットもご用意しています。</p></details><details class="faq-item"><summary>金鱗茶屋ではテイクアウトできますか？</summary><p>はい、テイクアウトに対応しています。</p></details><details class="faq-item"><summary>ジェラートの素材にこだわりはありますか？</summary><p>久住高原産の生乳と厳選素材を使い、無添加・無着色で作っています。</p></details><details class="faq-item"><summary>SWEETS FARM シャーロットに駐車場はありますか？</summary><p>くじゅう花公園の駐車場をご利用ください。お店が園内のテナントのため、専用の駐車場はありません。</p></details><details class="faq-item"><summary>お支払い方法を教えてください。</summary><p>SWEETS FARM シャーロットは現金のみです。金鱗茶屋は、現金・電子決済・クレジットカード・QR決済がご利用いただけます。</p></details><details class="faq-item"><summary>ペットと一緒に利用できますか？</summary><p>SWEETS FARM シャーロットでは、テラス席でご利用いただけます。</p></details><details class="faq-item"><summary>席数を教えてください。</summary><p>SWEETS FARM シャーロットは、店内5卓26席と、店外テラス18卓50席です。金鱗茶屋は4席で、テイクアウトにも対応しています。</p></details><details class="faq-item"><summary>お電話でお問い合わせできますか？</summary><p>申し訳ありませんが、お電話での対応は行っておりません。営業・製造で手が離せないことが多いため、お問い合わせは、サイト内のお問い合わせフォームまたはメール（sweetsfarm910@gmail.com）のみで承っております。</p></details><details class="faq-item"><summary>スイーツファーム（すいーつふぁーむ）とはどんなお店ですか？</summary><p>SWEETS FARM（スイーツファーム）は、大分県のくじゅう高原で、しぼりたての生乳を使ったオリジナルジェラートを作っているお店です。くじゅう花公園のシャーロットと、湯布院の金鱗茶屋の2店舗があります。</p></details><details class="faq-item"><summary>大分でジェラートが食べられるお店はどこですか？</summary><p>大分県竹田市のくじゅう花公園内にある SWEETS FARM シャーロットで、生乳のしぼりたてミルクジェラートや宇治抹茶のジェラートなどをお楽しみいただけます。通販では、九州から全国へお届けしています。</p></details><details class="faq-item"><summary>大分でおすすめのカフェはありますか？</summary><p>湯布院・金鱗湖の近くにある金鱗茶屋 Sweets farm cafe では、宇治のお茶を使った抹茶ラテやジェラートを、4席の小さな店内とテイクアウトで楽しめます。</p></details><details class="faq-item"><summary>アイスクリームやスイーツはありますか？</summary><p>ジェラートのほか、ラベンダーソフトなどのアイスクリーム、抹茶やほうじ茶のドリンクをご用意しています。商品は季節により変わります。</p></details><details class="faq-item"><summary>オリジナルの商品はありますか？</summary><p>久住高原の生乳と厳選素材で作る、無添加・無着色のオリジナルジェラートが中心です。公式オンラインショップではギフトセットもご用意しています。</p></details><details class="faq-item"><summary>くじゅうや花公園でジェラート・スイーツ・カフェを楽しめるお店はありますか？</summary><p>くじゅう花公園の中にある SWEETS FARM シャーロットで、くじゅう高原の生乳を使ったジェラートやラベンダーソフトなどのスイーツを楽しめます。店内5卓26席と、テラス席があり、花公園のカフェとしてもご利用いただけます。</p></details><details class="faq-item"><summary>竹田市でカフェに行きたいのですが、おすすめはありますか？</summary><p>竹田市久住町のくじゅう花公園内にある SWEETS FARM シャーロットが、ジェラートを中心としたカフェです。花を眺めながら、テラス席でゆっくり過ごせます（ペット同伴はテラス席で可）。</p></details><details class="faq-item"><summary>由布市・湯布院でジェラートやスイーツを食べられるお店はありますか？</summary><p>湯布院・金鱗湖の近くにある金鱗茶屋 Sweets farm cafe で、ジェラートや宇治抹茶のスイーツ、ラテをお楽しみいただけます。テイクアウトにも対応しています。</p></details><details class="faq-item"><summary>Where can I try gelato and ice cream in Yufuin? / ゆふいんでジェラートを食べられますか？</summary><p>Sweets Farm Cafe（金鱗茶屋）is near Lake Kinrin in Yufuin, Oita. You can enjoy gelato, ice cream and matcha sweets, and takeout is available. 湯布院の金鱗湖の近くにあり、ジェラート、アイスクリーム、抹茶スイーツをお楽しみいただけます。</p></details></div>
 </section>
 
+<!-- RECRUIT（スタッフ募集）：内容は recruit.json を編集して更新・取り下げします -->
+<section class="recruit-section" id="recruit" hidden>
+  <div class="news-inner">
+    <div class="section-header fade-up">
+      <span class="section-label">Recruit</span>
+      <h2 class="section-title"><a href="#recruit" class="section-anchor">スタッフ募集</a></h2>
+      <p class="section-desc">くじゅうと湯布院で、一緒に、働く仲間を、募集しています。</p>
+    </div>
+    <div class="recruit-grid" id="recruit-grid"></div>
+    <div class="rc-cta"><a href="#contact" id="recruit-apply">応募・ご質問はこちら（お問い合わせフォームへ）</a></div>
+    <p class="rc-note">お問い合わせフォームの「ご用件」で、「スタッフ募集について」を、お選びください。</p>
+  </div>
+</section>
+
 <section class="contact-section" id="contact">
   <div class="section-header fade-up">
     <span class="section-label editable-text" contenteditable="true" spellcheck="false" data-edit-key="section-label-5">Contact & Access</span>
@@ -3660,6 +3700,7 @@
             <option>ギフト・贈り物のご相談</option>
             <option>SWEETS FARM シャーロット（久住）について</option>
             <option>金鱗茶屋 Sweets farm cafe（湯布院）について</option>
+            <option>スタッフ募集について（応募・ご質問）</option>
             <option>取材・業務提携のご相談</option>
             <option>その他</option>
           </select>
@@ -4900,5 +4941,28 @@ window.addEventListener('scroll',f,{passive:true});f();})();
 })();
 </script>
 <script>(function(){ if(/[?&]edit=1/.test(location.search)){ var a=document.querySelector(".hero-card-link"); if(a) a.remove(); } })();</script>
+<script>
+/* スタッフ募集：recruit.json を読み込んで表示します（読み込めない時は、下のデータを表示）。
+   取り下げ → recruit.json で、その募集の "open": true を false に変えます。全部 false なら、募集の欄ごと消えます。 */
+(function(){
+  var FALLBACK={"items": [{"open": true, "theme": "farm", "store": "シャーロット", "place": "くじゅう花公園内（竹田市久住町）", "wage": "時給 1,200円", "perks": ["交通費 500円", "駐車場あり"], "shifts": [{"label": "募集1", "time": "10:00〜15:00", "note": "休憩30分・相談3時間以上〜"}, {"label": "募集2", "time": "9:25〜17:05", "note": "休憩40分 または 70分"}], "terms": ["週1日〜OK", "土日のみでも可能", "勤務日数は、ご相談ください"]}, {"open": true, "theme": "matcha", "store": "金鱗茶屋", "place": "湯布院・金鱗湖の近く（由布市湯布院町）", "wage": "時給 1,300円", "perks": ["交通費 500円", "駐車場あり"], "shifts": [{"label": "レギュラー", "time": "10:00〜16:00", "note": ""}], "terms": ["勤務日数は、ご相談ください"]}]};
+  var sec=document.getElementById('recruit'), grid=document.getElementById('recruit-grid'), nav=document.getElementById('nav-recruit');
+  function esc(t){ return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function draw(data){
+    var items=((data&&data.items)||[]).filter(function(i){ return i.open!==false; });
+    sec.hidden=!items.length; if(nav) nav.hidden=!items.length;
+    grid.innerHTML=items.map(function(i){
+      var perks=(i.perks||[]).map(function(p){return '<span>'+esc(p)+'</span>';}).join('');
+      var shifts=(i.shifts||[]).map(function(s){ return '<div class="rc-shift"><b>'+esc(s.label)+'</b><div>'+esc(s.time)+(s.note?'<small>'+esc(s.note)+'</small>':'')+'</div></div>'; }).join('');
+      var terms=(i.terms||[]).map(function(t){return '<li>'+esc(t)+'</li>';}).join('');
+      return '<article class="rc-card '+(i.theme==='matcha'?'matcha':'')+'"><div class="rc-head"><div class="rc-store">'+esc(i.store)+'</div><div class="rc-place">'+esc(i.place||'')+'</div><div class="rc-wage">'+esc(i.wage)+'</div><div class="rc-perks">'+perks+'</div></div><div class="rc-body">'+shifts+'<ul class="rc-terms">'+terms+'</ul></div></article>';
+    }).join('');
+  }
+  draw(FALLBACK);
+  if(window.fetch){ fetch('recruit.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(draw).catch(function(){}); }
+  var a=document.getElementById('recruit-apply');
+  if(a) a.addEventListener('click',function(){ var t=document.getElementById('inq-topic'); if(t){ for(var i=0;i<t.options.length;i++){ if(t.options[i].text.indexOf('スタッフ募集')===0){ t.selectedIndex=i; break; } } } });
+})();
+</script>
 </body>
 </html>
