@@ -2173,6 +2173,9 @@
   .drink-tab-content { display: none; }
   .drink-tab-content.active { display: block; animation: fadeUpIn 0.4s ease; }
 
+
+  .food-group { max-width: 1000px; margin: 0 auto 2.2rem; }
+  .food-group-title { font-size: 1.15rem; color: var(--brown); text-align: left; margin: 0 0 0.9rem; padding: 0.35rem 1rem; border-left: 5px solid var(--coral); background: rgba(255,122,92,0.08); border-radius: 0 12px 12px 0; display: flex; align-items: center; gap: 0.5rem; }
   .drink-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3190,6 +3193,10 @@
         <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-pineapple">パイナップル</div>
       </div>
       <div class="flavor-card">
+        <div class="flavor-photo img-drop-zone" data-key="flavor-mango"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button></div>
+        <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-mango">マンゴー（7月〜10月）</div>
+      </div>
+      <div class="flavor-card">
         <div class="flavor-photo img-drop-zone" data-key="flavor-lemongrass" data-default="images/flavors/lemongrass.webp"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span>写真を追加</div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="flavor-photo-icon">🌿</span></div>
         <div class="flavor-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="flavor-name-lemongrass">レモングラスティー&フルーツ</div>
       </div>
@@ -3565,54 +3572,194 @@
           <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-beer">¥500</span></div>
         </div>
       </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-sangria"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍷</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-sangria">サングリア</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-sangria">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-sangriasoda"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍹</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-sangriasoda">サングリアソーダ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-sangriasoda">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="drink-lemonchuhai"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍋</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-name-lemonchuhai">おいしいレモン酎ハイ 濃い目</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="drink-price-lemonchuhai">¥ ---</span></div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- 食事メニュー（シャーロット店内） -->
   <div id="drinktab-food" class="drink-tab-content fade-up">
     <p style="text-align:center; font-size:0.8rem; color:var(--text-mid); font-weight:300; margin-top:-1.5rem; margin-bottom:2rem;" class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-lead">くじゅう花公園内 シャーロット店の食事メニューです。※価格・内容は編集できます</p>
-    <div class="drink-grid">
+        <div class="food-group">
+      <h3 class="food-group-title"><span>🍝</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-pasta">パスタ</span></h3>
+      <div class="drink-grid">
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-pasta"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-pasta-bolognese"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta">彩り野菜のペペロンチーノ</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta-bolognese">豊後牛ボロネーゼ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta-bolognese">¥ ---</span></div>
         </div>
       </div>
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-chicken"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-pasta-carbonara"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-chicken">チキンライス</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-chicken">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta-carbonara">高原卵のカルボナーラ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta-carbonara">¥ ---</span></div>
         </div>
       </div>
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-pasta2"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-pasta-peperoncino"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta2">パスタ（季節のメニュー）</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta2">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta-peperoncino">彩り野菜のペペロンチーノ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta-peperoncino">¥ ---</span></div>
         </div>
       </div>
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-dessert"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍰</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-pasta-arrabbiata"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-dessert">デザートプレート</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-dessert">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta-arrabbiata">トマトとナスのアラビアータ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta-arrabbiata">¥ ---</span></div>
         </div>
       </div>
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-set"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">☕</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-pasta-duck"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍝</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-set">ランチセット（ドリンク付き）</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-set">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-pasta-duck">鴨肉と葱の和風ペペロンチーノ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-pasta-duck">¥ ---</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="food-group">
+      <h3 class="food-group-title"><span>🍚</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-rice">ごはん</span></h3>
+      <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-rice-chickenrice"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-rice-chickenrice">バター香るチーズのチキンライス</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-rice-chickenrice">¥ ---</span></div>
         </div>
       </div>
       <div class="drink-card">
-        <div class="drink-icon img-drop-zone" data-key="food-kids"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🧒</span></div>
+        <div class="drink-icon img-drop-zone" data-key="food-rice-drycurry"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
         <div class="drink-info">
-          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-kids">お子さまメニュー</div>
-          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-kids">¥ ---</span></div>
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-rice-drycurry">15種類のスパイスドライカレー</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-rice-drycurry">¥ ---</span></div>
         </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-rice-curridoria"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-rice-curridoria">温野菜とチーズのカレードリア</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-rice-curridoria">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-rice-meatdoria"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍚</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-rice-meatdoria">牛肉とトマトのミートドリア</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-rice-meatdoria">¥ ---</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="food-group">
+      <h3 class="food-group-title"><span>🌮</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-tacos">タコス</span></h3>
+      <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-tacos-italiantaco"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🌮</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-tacos-italiantaco">焼きベーコンとチーズのイタリアンタコス</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-tacos-italiantaco">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-tacos-chickentaco"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🌮</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-tacos-chickentaco">炙りチキンとチーズの野菜タコス</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-tacos-chickentaco">¥ ---</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="food-group">
+      <h3 class="food-group-title"><span>🥪</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-sandwich">サンドイッチ</span></h3>
+      <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-sandwich-blt"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥪</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-sandwich-blt">BLT ベーコンとレタスとトマトサンド</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-sandwich-blt">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-sandwich-clt"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥪</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-sandwich-clt">CLT チキンとレタスとトマトサンド</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-sandwich-clt">¥ ---</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="food-group">
+      <h3 class="food-group-title"><span>🍞</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-toast">厚切りトースト</span></h3>
+      <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-toast-honey"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍞</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-toast-honey">ハニートースト</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-toast-honey">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-toast-honeycheese"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍞</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-toast-honeycheese">ハニーチーズトースト</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-toast-honeycheese">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-toast-basilcheese"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🍞</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-toast-basilcheese">バジルチーズトースト</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-toast-basilcheese">¥ ---</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="food-group">
+      <h3 class="food-group-title"><span>🥗</span> <span class="editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-group-salad">サラダ</span></h3>
+      <div class="drink-grid">
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-salad-cheesetomato"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥗</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-salad-cheesetomato">焼きチーズとトマトのたっぷりサラダ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-salad-cheesetomato">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-salad-bacon"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥗</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-salad-bacon">炙りベーコンの野菜サラダ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-salad-bacon">¥ ---</span></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-icon img-drop-zone" data-key="food-salad-chicken"><input type="file" accept="image/*" onchange="handleFileInput(event, this.closest('.img-drop-zone'))"><div class="drop-hint"><span class="drop-hint-icon">📷</span></div><button class="remove-img-btn" onclick="removeImage(event, this.closest('.img-drop-zone'))">✕</button><span class="drink-icon-emoji">🥗</span></div>
+        <div class="drink-info">
+          <div class="drink-name editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-name-salad-chicken">旨味チキンの野菜サラダ</div>
+          <div class="drink-meta"><span class="drink-price editable-text" contenteditable="true" spellcheck="false" data-edit-key="food-price-salad-chicken">¥ ---</span></div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -4862,11 +5009,11 @@ window.addEventListener('scroll',f,{passive:true});f();})();
   });
   show();
   document.getElementById('sf-export').onclick=function(){
-    var out={images:{},adjust:{}}, n=0;
-    try{ for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(k.indexOf(IMG)===0){ out.images[k.slice(IMG.length)]=localStorage.getItem(k); n++; } else if(k.indexOf(ADJ)===0){ out.adjust[k.slice(ADJ.length)]=JSON.parse(localStorage.getItem(k)); n++; } } }catch(e){}
-    if(!n){ alert('差し替えた画像や調整が、まだありません。'); return; }
+    var out={images:{},adjust:{},texts:{},coTexts:{}}, n=0;
+    try{ for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(k.indexOf(IMG)===0){ out.images[k.slice(IMG.length)]=localStorage.getItem(k); n++; } else if(k.indexOf('sweetsfarm_text_')===0){ out.texts[k.slice(16)]=localStorage.getItem(k); n++; } else if(k.indexOf('co_text_')===0){ out.coTexts[k.slice(8)]=localStorage.getItem(k); n++; } else if(k.indexOf(ADJ)===0){ out.adjust[k.slice(ADJ.length)]=JSON.parse(localStorage.getItem(k)); n++; } } }catch(e){}
+    if(!n){ alert('直した文字や、差し替えた画像が、まだありません。'); return; }
     var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(out)],{type:'application/json'})); a.download='sweetsfarm-images.json'; document.body.appendChild(a); a.click(); a.remove();
-    alert('書き出しました（sweetsfarm-images.json）。このファイルを、Claude に送ってください。');
+    alert('書き出しました（sweetsfarm-images.json）。文字と画像の変更が入っています。このファイルを、Claude に送ってください。');
   };
 })();
 </script>
@@ -4984,6 +5131,13 @@ window.addEventListener('scroll',f,{passive:true});f();})();
   if(window.fetch){ fetch('recruit.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(draw).catch(function(){}); }
   var a=document.getElementById('recruit-apply');
   if(a) a.addEventListener('click',function(){ var t=document.getElementById('inq-topic'); if(t){ for(var i=0;i<t.options.length;i++){ if(t.options[i].text.indexOf('スタッフ募集')===0){ t.selectedIndex=i; break; } } } });
+})();
+</script>
+<script>
+/* 価格が未入力（---）のときは、公開ページでは価格を隠します */
+(function(){
+  if(/[?&]edit=1/.test(location.search)) return;
+  document.querySelectorAll('.drink-price').forEach(function(p){ if(/---/.test(p.textContent)) p.style.display='none'; });
 })();
 </script>
 </body>
